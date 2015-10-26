@@ -4,9 +4,9 @@
 
 name "vulcanosec/windows"
 title "Windows Base Security"
-maintainer "Vulcano Security GmbH"
-copyright "Vulcano Security GmbH"
-copyright_email "hello@vulcanosec.com"
+maintainer "Chef Software, Inc."
+copyright "Chef Software, Inc."
+copyright_email "support@chef.io"
 license "Proprietary, All rights reserved"
 summary "Verify that Windows nodes are configured securely"
 description IO.read(File.join(File.dirname(__FILE__), "README.md"))
