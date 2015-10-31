@@ -2,7 +2,7 @@
 # copyright: 2015, Vulcano Security GmbH
 # license: All rights reserved
 
-name 'vulcanosec/windows'
+name 'base/windows'
 title 'Windows Base Security'
 maintainer 'Chef Software, Inc.'
 copyright 'Chef Software, Inc.'
