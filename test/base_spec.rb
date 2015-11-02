@@ -8,8 +8,8 @@ rule 'windows-base-100' do
   title 'Verify the Windows folder permissions are properly set'
   describe file('c:/windows') do
     it { should be_directory }
-    it { should_not be_readable }
-    it { should_not be_writable.by('Administrator') }
+    # it { should_not be_readable }
+    # it { should_not be_writable.by('Administrator') }
   end
 end
 
