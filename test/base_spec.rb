@@ -46,7 +46,7 @@ rule 'windows-base-103' do
   title 'All Shares are Configured to Prevent Anonymous Access'
   describe registry_key('HKLM\\System\\CurrentControlSet\\Services\\LanManServer\\Parameters') do
     it { should exist }
-    its('NullSessionShares') { should eq nil  }
+    its('NullSessionShares') { should eq nil }
   end
 end
 

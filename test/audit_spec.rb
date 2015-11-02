@@ -29,7 +29,7 @@ rule 'windows-audit-102' do
   desc 'Only appies for Windows 2008 and newer'
   describe registry_key('HKLM\\Software\\Policies\\Microsoft\\Windows\\EventLog\\Setup') do
     it { should exist }
-    its('MaxSize') { should_not eq nil}
+    its('MaxSize') { should_not eq nil }
   end
 end
 
@@ -39,7 +39,7 @@ rule 'windows-audit-103' do
   desc 'Only appies for Windows 2008 and newer'
   describe registry_key('HKLM\\Software\\Policies\\Microsoft\\Windows\\EventLog\\System') do
     it { should exist }
-    its('MaxSize') { should_not eq nil}
+    its('MaxSize') { should_not eq nil }
   end
 end
 
