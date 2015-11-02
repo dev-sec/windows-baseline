@@ -7,8 +7,9 @@ rule 'windows-audit-100' do
   impact 0.1
   title 'Configure System Event Log (Application)'
   desc 'Only appies for Windows 2008 and newer'
-  describe group_policy('Windows Components\\Event Log Service\Application') do
-    its('Specify the maximum log file size (KB)') { should eq nil }
+  describe registry_key('HKLM\\Software\\Policies\\Microsoft\\Windows\\EventLog\\Application') do
+    it { should exist }
+    its('MaxSize') { should_not eq nil }
   end
 end
 
@@ -16,8 +17,9 @@ rule 'windows-audit-101' do
   impact 0.1
   title 'Configure System Event Log (Security)'
   desc 'Only appies for Windows 2008 and newer'
-  describe group_policy('Windows Components\\Event Log Service\\Security') do
-    its('Specify the maximum log file size (KB)') { should eq nil }
+  describe registry_key('HKLM\\Software\\Policies\\Microsoft\\Windows\\EventLog\\Security') do
+    it { should exist }
+    its('MaxSize') { should_not eq nil }
   end
 end
 
@@ -25,8 +27,9 @@ rule 'windows-audit-102' do
   impact 0.1
   title 'Configure System Event Log (Setup)'
   desc 'Only appies for Windows 2008 and newer'
-  describe group_policy('Windows Components\\Event Log Service\\Setup') do
-    its('Specify the maximum log file size (KB)') { should eq nil }
+  describe registry_key('HKLM\\Software\\Policies\\Microsoft\\Windows\\EventLog\\Setup') do
+    it { should exist }
+    its('MaxSize') { should_not eq nil}
   end
 end
 
@@ -34,8 +37,9 @@ rule 'windows-audit-103' do
   impact 0.1
   title 'Configure System Event Log (System)'
   desc 'Only appies for Windows 2008 and newer'
-  describe group_policy('Windows Components\\Event Log Service\\System') do
-    its('Specify the maximum log file size (KB)') { should eq nil }
+  describe registry_key('HKLM\\Software\\Policies\\Microsoft\\Windows\\EventLog\\System') do
+    it { should exist }
+    its('MaxSize') { should_not eq nil}
   end
 end
 

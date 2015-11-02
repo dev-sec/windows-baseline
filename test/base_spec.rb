@@ -35,24 +35,27 @@ end
 rule 'windows-base-102' do
   impact 1.0
   title 'Anonymous Access to Windows Shares and Named Pipes is Disallowed'
-  describe group_policy('Local Policies\\Security Options') do
-    its('Network access: Restrict anonymous access to Named Pipes and Shares') { should eq 1 }
+  describe registry_key('HKLM\\System\\CurrentControlSet\\Services\\LanManServer\\Parameters') do
+    it { should exist }
+    its('restrictnullsessaccess') { should eq 1 }
   end
 end
 
 rule 'windows-base-103' do
   impact 1.0
   title 'All Shares are Configured to Prevent Anonymous Access'
-  describe group_policy('Local Policies\\Security Options') do
-    its('Network access: Shares that can be accessed anonymously') { should eq nil }
+  describe registry_key('HKLM\\System\\CurrentControlSet\\Services\\LanManServer\\Parameters') do
+    it { should exist }
+    its('NullSessionShares') { should eq nil  }
   end
 end
 
 rule 'windows-base-104' do
   impact 1.0
   title 'Force Encrypted Windows Network Passwords'
-  describe group_policy('Local Policies\\Security Options') do
-    its('Microsoft network client: Send unencrypted password to third-party SMB servers') { should eq 0 }
+  describe registry_key('HKLM\\System\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters') do
+    it { should exist }
+    its('EnablePlainTextPassword') { should eq 0 }
   end
 end
 
@@ -65,23 +68,26 @@ rule 'windows-base-201' do
   desc '
     @link: http://support.microsoft.com/en-us/kb/823659
   '
-  describe group_policy('Local Policies\\Security Options') do
-    its('Network security: LAN Manager authentication level') { should eq 4 }
+  describe registry_key('HKLM\\System\\CurrentControlSet\\Control\\Lsa') do
+    it { should exist }
+    its('LmCompatibilityLevel') { should eq 4 }
   end
 end
 
 rule 'windows-base-202' do
   impact 1.0
   title 'Enable Strong Encryption for Windows Network Sessions on Clients'
-  describe group_policy('Local Policies\\Security Options') do
-    its('Network security: Minimum session security for NTLM SSP based (including secure RPC) clients') { should eq 537395200 }
+  describe registry_key('HKLM\\System\\CurrentControlSet\\Control\\Lsa\\MSV1_0') do
+    it { should exist }
+    its('NTLMMinClientSec') { should eq 537395200 }
   end
 end
 
 rule 'windows-base-203' do
   impact 1.0
   title 'Enable Strong Encryption for Windows Network Sessions on Servers'
-  describe group_policy('Local Policies\\Security Options') do
-    its('Network security: Minimum session security for NTLM SSP based (including secure RPC) servers') { should eq 537395200 }
+  describe registry_key('HKLM\\System\\CurrentControlSet\\Control\\Lsa\\MSV1_0') do
+    it { should exist }
+    its('NTLMMinServerSec') { should eq 537395200 }
   end
 end

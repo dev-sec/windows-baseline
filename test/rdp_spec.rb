@@ -6,15 +6,17 @@
 rule 'windows-rdp-100' do
   impact 1.0
   title 'Windows Remote Desktop Configured to Always Prompt for Password'
-  describe group_policy('Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Security') do
-    its('Always prompt for password upon connection') { should eq 1 }
+  describe registry_key('HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services') do
+    it { should exist }
+    its('fPromptForPassword') { should eq 1 }
   end
 end
 
 rule 'windows-rdp-101' do
   impact 1.0
   title 'Strong Encryption for Windows Remote Desktop Required'
-  describe group_policy('Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Security') do
-    its('Set client connection encryption level') { should eq 3 }
+  describe registry_key('HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services') do
+    it { should exist }
+    its('MinEncryptionLevel') { should eq 3 }
   end
 end

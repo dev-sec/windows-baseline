@@ -6,17 +6,17 @@
 rule 'windows-ie-101' do
   impact 1.0
   title 'IE 64-bit tab'
-  # TODO: we may need to check all users as well
-  describe group_policy('Windows Components\\Internet Explorer\\Internet Control Panel\\Advanced Page') do
-    its('Turn on 64-bit tab processes when running in Enhanced Protected Mode on 64-bit versions of Windows') { should eq 1 }
+  describe registry_key('HKLM\\Software\\Policies\\Microsoft\\Internet Explorer\\Main') do
+    it { should exist }
+    its('Isolation64Bit') { should eq 1 }
   end
 end
 
 rule 'windows-ie-102' do
   impact 1.0
   title 'Run antimalware programs against ActiveX controls'
-  # TODO: we may need to check all users as well
-  describe group_policy('Windows Components\\Internet Explorer\\Internet Control Panel\\Security Page\\Internet Zone') do
-    its("Don't run antimalware programs against ActiveX controls") { should eq 0 }
+  describe registry_key('HKLM\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\3') do
+    it { should exist }
+    its('270C') { should eq 0 }
   end
 end
