@@ -46,7 +46,7 @@ rule 'windows-base-103' do
   title 'All Shares are Configured to Prevent Anonymous Access'
   describe registry_key('HKLM\System\CurrentControlSet\Services\LanManServer\Parameters') do
     it { should exist }
-    its('NullSessionShares') { should eq nil }
+    its('NullSessionShares') { should eq [''] }
   end
 end
 
@@ -79,7 +79,7 @@ rule 'windows-base-202' do
   title 'Enable Strong Encryption for Windows Network Sessions on Clients'
   describe registry_key('HKLM\System\CurrentControlSet\Control\Lsa\MSV1_0') do
     it { should exist }
-    its('NTLMMinClientSec') { should eq 537395200 }
+    its('NtlmMinClientSec') { should eq 537_395_200 }
   end
 end
 
@@ -88,6 +88,6 @@ rule 'windows-base-203' do
   title 'Enable Strong Encryption for Windows Network Sessions on Servers'
   describe registry_key('HKLM\System\CurrentControlSet\Control\Lsa\MSV1_0') do
     it { should exist }
-    its('NTLMMinServerSec') { should eq 537395200 }
+    its('NtlmMinServerSec') { should eq 537_395_200 }
   end
 end
