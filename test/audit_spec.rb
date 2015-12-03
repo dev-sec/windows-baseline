@@ -1,7 +1,8 @@
 # encoding: utf-8
 # copyright: 2015, Vulcano Security GmbH
 # license: All rights reserved
-# title: Windows Audit & Logging Configuration
+
+title 'Windows Audit & Logging Configuration'
 
 rule 'windows-audit-100' do
   impact 0.1

@@ -1,7 +1,8 @@
 # encoding: utf-8
 # copyright: 2015, Vulcano Security GmbH
 # license: All rights reserved
-# title: Windows Audit & Logging Configuration
+
+title 'Windows IE Configuration'
 
 rule 'windows-ie-101' do
   impact 1.0
