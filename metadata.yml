@@ -1,10 +1,10 @@
-name      : windows
-title     : Windows Base Security
+name: windows
+title: Windows Base Security
 maintainer: Chef Software, Inc.
-copyright : Chef Software, Inc.
-copyright_email : support@chef.io
-license   : Proprietary, All rights reserved
-summary   : Verify that Windows nodes are configured securely
-version   : 1.1.0
-supports  :
+copyright: Chef Software, Inc.
+copyright_email: support@chef.io
+license: Proprietary, All rights reserved
+summary: Verify that Windows nodes are configured securely
+version: 1.1.0
+supports:
   - windows
