@@ -1,4 +1,4 @@
-name: windows
+name: base/windows
 title: Windows Base Security
 maintainer: Chef Software, Inc.
 copyright: Chef Software, Inc.
