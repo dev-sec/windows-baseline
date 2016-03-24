@@ -4,7 +4,7 @@
 
 title 'Windows Account Configuration'
 
-rule 'windows-account-100' do
+control 'windows-account-100' do
   impact 1.0
   title 'Windows Remote Desktop Configured to Only Allow System Administrators Access'
   describe security_policy do
@@ -13,7 +13,7 @@ rule 'windows-account-100' do
   end
 end
 
-rule 'windows-account-101' do
+control 'windows-account-101' do
   impact 1.0
   title 'Windows Default Guest Account is Disabled'
   describe security_policy do
@@ -21,7 +21,7 @@ rule 'windows-account-101' do
   end
 end
 
-rule 'windows-account-102' do
+control 'windows-account-102' do
   impact 1.0
   title 'Windows Password Complexity is Enabled'
   desc 'Password must meet complexity requirement'
@@ -30,7 +30,7 @@ rule 'windows-account-102' do
   end
 end
 
-rule 'windows-account-103' do
+control 'windows-account-103' do
   impact 1.0
   title 'Minimum Windows Password Length Configured to be at Least 8 Characters'
   desc 'Minimum password length'
@@ -40,7 +40,7 @@ rule 'windows-account-103' do
   end
 end
 
-rule 'windows-account-104' do
+control 'windows-account-104' do
   impact 1.0
   title 'Set Windows Account lockout threshold'
   desc 'Account lockout threshold, see https://technet.microsoft.com/en-us/library/hh994574.aspx'
@@ -50,7 +50,7 @@ rule 'windows-account-104' do
   end
 end
 
-rule 'windows-account-105' do
+control 'windows-account-105' do
   impact 1.0
   title 'Windows Account Lockout Counter Configured to Wait at Least 30 Minutes Before Reset'
   desc 'Reset lockout counter after, see https://technet.microsoft.com/en-us/library/hh994568.aspx'
@@ -60,7 +60,7 @@ rule 'windows-account-105' do
   end
 end
 
-rule 'windows-account-106' do
+control 'windows-account-106' do
   impact 1.0
   title 'Windows Account Lockout Duration Configured to at Least 30 Minutes'
   desc 'Account lockout duration, see https://technet.microsoft.com/en-us/library/hh994569.aspx'

@@ -4,7 +4,7 @@
 
 title 'Windows Audit & Logging Configuration'
 
-rule 'windows-audit-100' do
+control 'windows-audit-100' do
   impact 0.1
   title 'Configure System Event Log (Application)'
   desc 'Only appies for Windows 2008 and newer'
@@ -14,7 +14,7 @@ rule 'windows-audit-100' do
   end
 end
 
-rule 'windows-audit-101' do
+control 'windows-audit-101' do
   impact 0.1
   title 'Configure System Event Log (Security)'
   desc 'Only appies for Windows 2008 and newer'
@@ -24,7 +24,7 @@ rule 'windows-audit-101' do
   end
 end
 
-rule 'windows-audit-102' do
+control 'windows-audit-102' do
   impact 0.1
   title 'Configure System Event Log (Setup)'
   desc 'Only appies for Windows 2008 and newer'
@@ -34,7 +34,7 @@ rule 'windows-audit-102' do
   end
 end
 
-rule 'windows-audit-103' do
+control 'windows-audit-103' do
   impact 0.1
   title 'Configure System Event Log (System)'
   desc 'Only appies for Windows 2008 and newer'
@@ -44,7 +44,7 @@ rule 'windows-audit-103' do
   end
 end
 
-rule 'windows-audit-201' do
+control 'windows-audit-201' do
   impact 1.0
   title 'Kerberos Authentication Service Audit Log'
   desc '
@@ -56,7 +56,7 @@ rule 'windows-audit-201' do
   end
 end
 
-rule 'windows-audit-202' do
+control 'windows-audit-202' do
   impact 1.0
   title 'Kerberos Service Ticket Operations Audit Log'
   desc '
@@ -68,7 +68,7 @@ rule 'windows-audit-202' do
   end
 end
 
-rule 'windows-audit-203' do
+control 'windows-audit-203' do
   impact 1.0
   title 'Account Logon Audit Log'
   desc '
@@ -80,7 +80,7 @@ rule 'windows-audit-203' do
   end
 end
 
-rule 'windows-audit-204' do
+control 'windows-audit-204' do
   impact 1.0
   title 'Audit Application Group Management'
   desc '
@@ -91,7 +91,7 @@ rule 'windows-audit-204' do
   end
 end
 
-rule 'windows-audit-205' do
+control 'windows-audit-205' do
   impact 1.0
   title 'Audit Computer Account Management'
   desc '
@@ -102,7 +102,7 @@ rule 'windows-audit-205' do
   end
 end
 
-rule 'windows-audit-206' do
+control 'windows-audit-206' do
   impact 1.0
   title 'Audit Distributed Group Management'
   desc '

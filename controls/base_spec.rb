@@ -4,7 +4,7 @@
 
 title 'Windows Access Configuration'
 
-rule 'windows-base-100' do
+control 'windows-base-100' do
   impact 1.0
   title 'Verify the Windows folder permissions are properly set'
   describe file('c:/windows') do
@@ -16,7 +16,7 @@ end
 
 ## NTLM
 
-rule 'windows-base-101' do
+control 'windows-base-101' do
   impact 1.0
   title 'Safe DLL Search Mode is Enabled'
   desc '
@@ -33,7 +33,7 @@ end
 # MSS: (SafeDllSearchMode) Enable Safe DLL search mode (recommended)
 # Ensure voulmes are using the NTFS file systems
 
-rule 'windows-base-102' do
+control 'windows-base-102' do
   impact 1.0
   title 'Anonymous Access to Windows Shares and Named Pipes is Disallowed'
   describe registry_key('HKLM\System\CurrentControlSet\Services\LanManServer\Parameters') do
@@ -42,7 +42,7 @@ rule 'windows-base-102' do
   end
 end
 
-rule 'windows-base-103' do
+control 'windows-base-103' do
   impact 1.0
   title 'All Shares are Configured to Prevent Anonymous Access'
   describe registry_key('HKLM\System\CurrentControlSet\Services\LanManServer\Parameters') do
@@ -51,7 +51,7 @@ rule 'windows-base-103' do
   end
 end
 
-rule 'windows-base-104' do
+control 'windows-base-104' do
   impact 1.0
   title 'Force Encrypted Windows Network Passwords'
   describe registry_key('HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters') do
@@ -63,7 +63,7 @@ end
 ## LSA Authentication
 # @link: https://msdn.microsoft.com/en-us/library/windows/desktop/aa378326(v=vs.85).aspx
 
-rule 'windows-base-201' do
+control 'windows-base-201' do
   impact 1.0
   title 'Strong Windows NTLMv2 Authentication Enabled; Weak LM Disabled'
   desc '
@@ -75,7 +75,7 @@ rule 'windows-base-201' do
   end
 end
 
-rule 'windows-base-202' do
+control 'windows-base-202' do
   impact 1.0
   title 'Enable Strong Encryption for Windows Network Sessions on Clients'
   describe registry_key('HKLM\System\CurrentControlSet\Control\Lsa\MSV1_0') do
@@ -84,7 +84,7 @@ rule 'windows-base-202' do
   end
 end
 
-rule 'windows-base-203' do
+control 'windows-base-203' do
   impact 1.0
   title 'Enable Strong Encryption for Windows Network Sessions on Servers'
   describe registry_key('HKLM\System\CurrentControlSet\Control\Lsa\MSV1_0') do

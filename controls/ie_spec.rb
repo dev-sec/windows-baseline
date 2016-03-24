@@ -4,7 +4,7 @@
 
 title 'Windows IE Configuration'
 
-rule 'windows-ie-101' do
+control 'windows-ie-101' do
   impact 1.0
   title 'IE 64-bit tab'
   describe registry_key('HKLM\Software\Policies\Microsoft\Internet Explorer\Main') do
@@ -13,7 +13,7 @@ rule 'windows-ie-101' do
   end
 end
 
-rule 'windows-ie-102' do
+control 'windows-ie-102' do
   impact 1.0
   title 'Run antimalware programs against ActiveX controls'
   describe registry_key('HKLM\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3') do
