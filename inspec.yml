@@ -7,4 +7,4 @@ license: Proprietary, All rights reserved
 summary: Verify that Windows nodes are configured securely
 version: 1.1.0
 supports:
-  - windows
+  - os-family: windows
