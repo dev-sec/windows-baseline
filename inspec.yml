@@ -1,5 +1,7 @@
+# encoding: utf-8
+
 name: windows
-title: Windows Base Security
+title: Windows Server 2012R2 Base Security
 maintainer: Chef Software, Inc.
 copyright: Chef Software, Inc.
 copyright_email: support@chef.io
