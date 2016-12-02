@@ -16,7 +16,7 @@ control 'cis-network-access-2.2.2' do
   title '2.2.2 Set Access this computer from the network'
   desc 'Set Access this computer from the network'
   describe security_policy do
-    its('SeNetworkLogonRight') { should eq ['S-1-0'] }
+    its('SeNetworkLogonRight') { should eq ['S-1-0-0'] }
   end
 end
 
