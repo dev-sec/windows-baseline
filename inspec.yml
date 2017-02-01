@@ -7,6 +7,6 @@ copyright: Hardening Framework Team
 copyright_email: hello@hardening.io
 license: Apache 2 license
 summary: Baselin for best-preactice Windows OS hardening
-version: 1.0.0
+version: 1.0.1
 supports:
   - os-family: windows
