@@ -50,7 +50,10 @@ end
 control 'windows-account-102' do
   impact 1.0
   title 'Windows Password Complexity is Enabled'
-  desc 'Password must meet complexity requirement'
+  tag cis: ['windows_2012r2:1.1.5', 'windows_2016:1.1.5']
+  ref 'Password must meet complexity requirements', url: 'https://technet.microsoft.com/en-us/library/hh994562(v=ws.11).aspx'
+  ref 'CIS Microsoft Windows Server 2012 R2 Benchmark'
+  ref 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark'
   describe security_policy do
     its('PasswordComplexity') { should eq 1 }
   end
