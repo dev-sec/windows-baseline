@@ -30,13 +30,15 @@ end
 
 # MSS: (SafeDllSearchMode) Enable Safe DLL search mode (recommended)
 # Ensure voulmes are using the NTFS file systems
-
 control 'windows-base-102' do
   impact 1.0
   title 'Anonymous Access to Windows Shares and Named Pipes is Disallowed'
+  tag cis: ['windows_2012r2:2.3.11.8', 'windows_2016:2.3.10.9']
+  ref 'CIS Microsoft Windows Server 2012 R2 Benchmark'
+  ref 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark'
   describe registry_key('HKLM\System\CurrentControlSet\Services\LanManServer\Parameters') do
     it { should exist }
-    its('restrictnullsessaccess') { should eq 1 }
+    its('RestrictNullSessAccess') { should eq 1 }
   end
 end
 
