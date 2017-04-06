@@ -95,8 +95,11 @@ control 'windows-audit-205' do
   desc '
     policy_path: Computer Configuration\Windows Settings\Advanced Audit Policy Configuration\Audit Policies\Account Management
   '
+  tag cis: ['windows_2012r2:17.2.2', 'windows_2016L:17.2.2']
+  ref 'CIS Microsoft Windows Server 2012 R2 Benchmark'
+  ref 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark'
   describe audit_policy do
-    its('Computer Account Management') { should_not eq 'No Auditing' }
+    its('Computer Account Management') { should eq 'Success and Failure' }
   end
 end
 
