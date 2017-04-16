@@ -2,6 +2,7 @@
 
 title 'Windows PowerShell'
 
+## FIXME! CIS says disabled, fireeye enabled https://www.fireeye.com/blog/threat-research/2016/02/greater_visibilityt.html
 control 'powershell-script-blocklogging' do
   impact 1.0
   title 'PowerShell Script Block Logging'
@@ -10,7 +11,7 @@ control 'powershell-script-blocklogging' do
   ref 'CIS Microsoft Windows Server 2012 R2 Benchmark', url: 'https://benchmarks.cisecurity.org/tools2/windows/CIS_Microsoft_Windows_Server_2012_R2_Benchmark_v2.2.1.pdf'
   describe registry_key('HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging') do
     it { should exist }
-    its('EnableScriptBlockLogging') { should eq 0 }
+    its('EnableScriptBlockLogging') { should eq 1 }
   end
 end
 
@@ -22,6 +23,6 @@ control 'powershell-transcription' do
   ref 'CIS Microsoft Windows Server 2012 R2 Benchmark', url: 'https://benchmarks.cisecurity.org/tools2/windows/CIS_Microsoft_Windows_Server_2012_R2_Benchmark_v2.2.1.pdf'
   describe registry_key('HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcription') do
     it { should exist }
-    its('EnableTranscripting') { should eq 0 }
+    its('EnableTranscripting') { should eq 1 }
   end
 end

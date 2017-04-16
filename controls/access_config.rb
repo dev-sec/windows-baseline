@@ -71,7 +71,7 @@ control 'windows-base-201' do
   '
   describe registry_key('HKLM\System\CurrentControlSet\Control\Lsa') do
     it { should exist }
-    its('LmCompatibilityLevel') { should eq 4 }
+    its('LmCompatibilityLevel') { should > 4 }
   end
 end
 
@@ -80,7 +80,7 @@ control 'windows-base-202' do
   title 'Enable Strong Encryption for Windows Network Sessions on Clients'
   describe registry_key('HKLM\System\CurrentControlSet\Control\Lsa\MSV1_0') do
     it { should exist }
-    its('NtlmMinClientSec') { should eq 537_395_200 }
+    its('NtlmMinClientSec') { should > 537_395_200 }
   end
 end
 
@@ -89,6 +89,6 @@ control 'windows-base-203' do
   title 'Enable Strong Encryption for Windows Network Sessions on Servers'
   describe registry_key('HKLM\System\CurrentControlSet\Control\Lsa\MSV1_0') do
     it { should exist }
-    its('NtlmMinServerSec') { should eq 537_395_200 }
+    its('NtlmMinServerSec') { should > 537_395_200 }
   end
 end
