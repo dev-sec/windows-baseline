@@ -16,7 +16,7 @@ end
 control 'disable-windows-store' do
   impact 1.0
   title 'Disable Windows Store'
-  desc 'Ensure Turn off Automatic Download and Install ofupdates is set to Disabled'
+  desc 'Ensure Turn off Automatic Download and Install of updates is set to Disabled'
   tag cis: '18.9.61.1'
   ref 'CIS Microsoft Windows Server 2012 R2 Benchmark', url: 'https://benchmarks.cisecurity.org/tools2/windows/CIS_Microsoft_Windows_Server_2012_R2_Benchmark_v2.2.1.pdf'
   describe registry_key('HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStore') do

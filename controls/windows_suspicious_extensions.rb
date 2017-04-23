@@ -26,4 +26,3 @@ control 'wsh-101' do
     its('(Default)') { should eq '%windir%\system32\notepad.exe' }
   end
 end
-

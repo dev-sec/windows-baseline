@@ -15,4 +15,3 @@ control 'mimikatz-101' do
     its('LocalAccountTokenFilterPolicy') { should eq 0 }
   end
 end
-

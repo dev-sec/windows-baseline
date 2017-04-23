@@ -10,4 +10,3 @@ control 'wpad-101' do
     its('WpadOverride') { should eq 1 }
   end
 end
-

@@ -10,4 +10,3 @@ control 'llmnr-101' do
     its('EnableMulticast') { should eq 0 }
   end
 end
-

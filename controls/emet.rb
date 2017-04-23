@@ -14,4 +14,3 @@ control 'EMET-1' do
     its('list.length') { should eq 1 }
   end
 end
-

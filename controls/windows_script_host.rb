@@ -11,4 +11,3 @@ control 'wsh-101' do
     its('IgnoreUserSettings') { should eq 1 }
   end
 end
-
