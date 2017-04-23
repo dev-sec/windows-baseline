@@ -8,8 +8,8 @@ control 'sysmon-1' do
   desc 'Sysmon process monitoring is active'
   ## FIXME! process listing NOK
   describe processes('sysmon.exe') do
-    #describe processes('c:\windows\sysmon.exe') do
+    # describe processes('c:\windows\sysmon.exe') do
     its('list.length') { should eq 1 }
-    #its('users') { should cmp 'SYSTEM' }
+    # its('users') { should cmp 'SYSTEM' }
   end
 end
