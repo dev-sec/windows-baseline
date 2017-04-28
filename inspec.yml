@@ -2,9 +2,9 @@
 
 name: windows-baseline
 title: DevSec Windows Security Baseline
-maintainer: Hardening Framework Team
-copyright: Hardening Framework Team
-copyright_email: hello@hardening.io
+maintainer: DevSec Hardening Framework Team
+copyright: DevSec Hardening Framework Team
+copyright_email: hello@dev-sec.io
 license: Apache 2 license
 summary: Baselin for best-preactice Windows OS hardening
 version: 1.0.1
