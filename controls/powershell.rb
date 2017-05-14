@@ -22,7 +22,7 @@ control 'powershell-module-logging' do
   end
 end
 
-if powershellblocklogging_enabled?
+if powershellblocklogging_enabled
   control 'powershell-script-blocklogging' do
     impact 1.0
     title 'PowerShell Script Block Logging'
@@ -47,7 +47,7 @@ else
   end
 end
 
-if powershelltranscription_enabled?
+if powershelltranscription_enabled
   control 'powershell-transcription' do
     impact 1.0
     title 'PowerShell Transcription'
