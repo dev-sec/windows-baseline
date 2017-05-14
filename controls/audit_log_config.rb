@@ -26,7 +26,6 @@ control 'windows-audit-101' do
     it { should exist }
     its('MaxSize') { should_not eq nil }
   end
-  ## Not detected but yes for Application and System???
   describe registry_key('HKLM\System\CurrentControlSet\Services\EventLog\Security') do
     it { should exist }
     its('MaxSize') { should_not eq nil }

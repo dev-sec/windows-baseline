@@ -69,6 +69,7 @@ control 'windows-base-201' do
   desc '
     @link: http://support.microsoft.com/en-us/kb/823659
   '
+  ref url: 'https://technet.microsoft.com/en-us/library/cc960646.aspx'
   describe registry_key('HKLM\System\CurrentControlSet\Control\Lsa') do
     it { should exist }
     its('LmCompatibilityLevel') { should > 4 }
