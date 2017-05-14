@@ -2,7 +2,7 @@
 
 emet_present = attribute('emet_present', default: false, description: 'Should we control presence of Microsoft EMET')
 
-if emet_present?
+if emet_present
   title 'Ms EMET'
 
   control 'EMET-1' do

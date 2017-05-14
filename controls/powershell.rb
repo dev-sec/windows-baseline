@@ -44,6 +44,7 @@ else
       it { should exist }
       its('EnableScriptBlockLogging') { should eq 0 }
     end
+  end
 end
 
 if powershelltranscription_enabled?

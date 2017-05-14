@@ -2,7 +2,7 @@
 
 sysmon_present = attribute('sysmon_present', default: false, description: 'Should we control presence of Microsoft sysmon')
 
-if sysmon_present?
+if sysmon_present
   title 'Ms Sysmon'
 
   control 'sysmon-1' do
@@ -16,7 +16,7 @@ if sysmon_present?
     # describe processes('c:\windows\sysmon.exe') do
     #   its('list.length') { should eq 1 }
     #   its('users') { should cmp 'SYSTEM' }
-    #end
+    # end
     describe file('c:\windows\sysmon.exe') do
       it { should be_file }
     end

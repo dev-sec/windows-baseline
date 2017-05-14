@@ -2,7 +2,7 @@
 
 osquery_present = attribute('osquery_present', default: false, description: 'Should we control presence of Facebook osquery')
 
-if osquery_present?
+if osquery_present
   title 'Facebook Osquery'
 
   control 'osquery-1' do
