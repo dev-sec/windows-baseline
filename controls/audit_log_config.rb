@@ -174,3 +174,25 @@ control 'windows-audit-206' do
     its('Distribution Group Management') { should_not eq 'No Auditing' }
   end
 end
+
+control 'windows-audit-207' do
+  impact 1.0
+  title 'Audit Process Cmdline'
+  desc 'Command line data must be included in process creation events'
+  ref url: 'https://www.stigviewer.com/stig/windows_8_8.1/2014-06-27/finding/V-43239'
+  describe registry_key('HKEY_LOCAL_MACHINE:\Software\Microsoft\Windows\CurrentVersion\Policies\System\Audit') do
+    it { should exist }
+    its('ProcessCreationIncludeCmdLine_Enabled') { should eq 1 }
+  end
+end
+
+control 'windows-audit-208' do
+  impact 1.0
+  title 'Audit LSA plugins and drivers'
+  desc 'How to identify plug-ins and drivers loaded by the lsass.exe'
+  ref url: 'https://adsecurity.org/?p=3299'
+  describe registry_key('HKEY_LOCAL_MACHINE:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\LSASS.exe') do
+    it { should exist }
+    its('AuditLevel') { should eq 8 }
+  end
+end
