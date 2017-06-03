@@ -1,8 +1,32 @@
 # Change Log
 
-## [1.0.0](https://github.com/dev-sec/windows-baseline/tree/1.0.0) (2016-12-21)
+## [1.1.0](https://github.com/dev-sec/windows-baseline/tree/1.1.0) (2017-05-08)
+[Full Changelog](https://github.com/dev-sec/windows-baseline/compare/1.0.1...1.1.0)
+
+**Implemented enhancements:**
+
+- The baseline should be organized by components [\#6](https://github.com/dev-sec/windows-baseline/issues/6)
+
+**Closed issues:**
+
+- Licensing information mismatch? [\#4](https://github.com/dev-sec/windows-baseline/issues/4)
+
 **Merged pull requests:**
 
+- update metadata [\#15](https://github.com/dev-sec/windows-baseline/pull/15) ([chris-rock](https://github.com/chris-rock))
+- Privacy [\#13](https://github.com/dev-sec/windows-baseline/pull/13) ([MattTunny](https://github.com/MattTunny))
+- add cis tags for some controls [\#12](https://github.com/dev-sec/windows-baseline/pull/12) ([chris-rock](https://github.com/chris-rock))
+- add references to powershell hardening [\#11](https://github.com/dev-sec/windows-baseline/pull/11) ([chris-rock](https://github.com/chris-rock))
+- restrict ruby testing in travis to 2.3.3 [\#10](https://github.com/dev-sec/windows-baseline/pull/10) ([chris-rock](https://github.com/chris-rock))
+- added powershell test [\#9](https://github.com/dev-sec/windows-baseline/pull/9) ([MattTunny](https://github.com/MattTunny))
+- rename controls [\#8](https://github.com/dev-sec/windows-baseline/pull/8) ([chris-rock](https://github.com/chris-rock))
+- add contribution guidelines [\#7](https://github.com/dev-sec/windows-baseline/pull/7) ([chris-rock](https://github.com/chris-rock))
+
+## [1.0.1](https://github.com/dev-sec/windows-baseline/tree/1.0.1) (2017-02-01)
+**Merged pull requests:**
+
+- Removed per control licensing as repo is under Apache 2.0 [\#5](https://github.com/dev-sec/windows-baseline/pull/5) ([grdnrio](https://github.com/grdnrio))
+- 1.0.0 [\#3](https://github.com/dev-sec/windows-baseline/pull/3) ([chris-rock](https://github.com/chris-rock))
 - Switched fron Nil to Nobody SID due to mismatch on 2012R2 [\#2](https://github.com/dev-sec/windows-baseline/pull/2) ([grdnrio](https://github.com/grdnrio))
 - Joeg/sid refactor [\#1](https://github.com/dev-sec/windows-baseline/pull/1) ([grdnrio](https://github.com/grdnrio))
 

@@ -60,6 +60,16 @@ control 'windows-base-104' do
   end
 end
 
+control 'windows-base-105' do
+  title 'SMB1 to Windows Shares is disabled'
+  desc 'All Windows Shares are Configured to disable the SMB1 protocol'
+  impact 1.0
+  describe registry_key('HKLM\System\CurrentControlSet\Services\LanManServer\Parameters') do
+    it { should exist }
+    its('SMB1') { should eq 0 }
+  end
+end
+
 ## LSA Authentication
 # @link: https://msdn.microsoft.com/en-us/library/windows/desktop/aa378326(v=vs.85).aspx
 
