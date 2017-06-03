@@ -2,8 +2,8 @@
 
 windows_services_harden = attribute('windows_services_harden', default: true, description: 'Should we ensure services hardening')
 
-if msoffice_present
-  title 'Microsoft Windows services'
+if windows_services_harden
+  title 'Microsoft Windows services hardening'
 
   control 'services-1' do
     impact 0.7
