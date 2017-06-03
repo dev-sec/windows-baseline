@@ -2,8 +2,8 @@
 
 title 'Windows PowerShell'
 
-powershellblocklogging_enabled = attribute('powershellblocklogging_enabled', default: false, description: 'Should we control Powershell Script Block Logging as enabled or not')
-powershelltranscription_enabled = attribute('powershelltranscription_enabled', default: false, description: 'Should we control Powershell Transcription as enabled or not')
+powershellblocklogging_enabled = attribute('powershellblocklogging_enabled', default: true, description: 'Should we control Powershell Script Block Logging as enabled or not')
+powershelltranscription_enabled = attribute('powershelltranscription_enabled', default: true, description: 'Should we control Powershell Transcription as enabled or not')
 
 ## FIXME! can we test powershell v5+ is installed? seems only windows_feature
 
@@ -53,6 +53,7 @@ if powershelltranscription_enabled
     title 'PowerShell Transcription'
     desc 'Transcription creates a unique record of every PowerShell session, including all input and output, exactly as it appears in the session.'
     ref url: 'https://www.fireeye.com/blog/threat-research/2016/02/greater_visibilityt.html'
+    ref url: 'https://blogs.msdn.microsoft.com/daviddasneves/2017/05/25/powershell-security-at-enterprise-customers/'
     describe registry_key('HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\PowerShell\Transcription') do
       it { should exist }
       its('EnableTranscripting') { should eq 1 }
