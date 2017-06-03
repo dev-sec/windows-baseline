@@ -16,6 +16,6 @@ control 'smb-101' do
   #   its('stdout') { should_not eq '' }
   # end
   describe powershell('Get-WindowsOptionalFeature -Online | where FeatureName -eq SMB1Protocol') do
-    its('stdout') { should match (/Disabled/) }
+    its('stdout') { should cmp 'Disabled' }
   end
 end
