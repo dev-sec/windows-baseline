@@ -2,7 +2,7 @@
 
 msoffice_present = attribute('msoffice_present', default: false, description: 'Should we control presence of Microsoft msoffice')
 
-if msoffice_present?
+if msoffice_present
   title 'Microsoft office'
 
   control 'msoffice-1' do
