@@ -85,9 +85,9 @@ control 'powershell-remove-v2' do
   #   its('stdout') { should_not eq '' }
   # end
   describe powershell('Get-WindowsOptionalFeature -Online | where FeatureName -eq MicrosoftWindowsPowerShellV2') do
-    its('stdout') { should match /Disabled/ }
+    its('stdout') { should match (/Disabled/) }
   end
   describe powershell('Get-WindowsOptionalFeature -Online | where FeatureName -eq MicrosoftWindowsPowerShellV2Root') do
-    its('stdout') { should match /Disabled/ }
+    its('stdout') { should match (/Disabled/) }
   end
 end
