@@ -2,7 +2,7 @@
 
 ipv6_tunnels = attribute('ipv6_tunnels', default: false, description: 'Should IPv6 tunnels be present')
 
-if not ipv6_tunnels
+unless ipv6_tunnels
   title 'Microsoft IPv6'
 
   control 'ipv6-1' do

@@ -18,7 +18,7 @@ if windows_services_harden
       WinHttpAutoProxySvc
       Xbox
     ).each do |svc|
-      describe service("#{svc}") do
+      describe service(svc.to_s)) do
         it { should_not be_running }
       end
     end
