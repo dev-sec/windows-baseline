@@ -180,7 +180,7 @@ control 'windows-audit-207' do
   title 'Audit Process Cmdline'
   desc 'Command line data must be included in process creation events'
   ref url: 'https://www.stigviewer.com/stig/windows_8_8.1/2014-06-27/finding/V-43239'
-  describe registry_key('HKEY_LOCAL_MACHINE:\Software\Microsoft\Windows\CurrentVersion\Policies\System\Audit') do
+  describe registry_key('HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System\Audit') do
     it { should exist }
     its('ProcessCreationIncludeCmdLine_Enabled') { should eq 1 }
   end
@@ -191,7 +191,7 @@ control 'windows-audit-208' do
   title 'Audit LSA plugins and drivers'
   desc 'How to identify plug-ins and drivers loaded by the lsass.exe'
   ref url: 'https://adsecurity.org/?p=3299'
-  describe registry_key('HKEY_LOCAL_MACHINE:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\LSASS.exe') do
+  describe registry_key('HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\LSASS.exe') do
     it { should exist }
     its('AuditLevel') { should eq 8 }
   end

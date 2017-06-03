@@ -12,11 +12,11 @@ control 'powershell-module-logging' do
   title 'PowerShell Module Logging'
   desc 'Enabling PowerShell Module Logging will record executed scripts'
   ref url: 'https://www.fireeye.com/blog/threat-research/2016/02/greater_visibilityt.html'
-  describe registry_key('HKEY_LOCAL_MACHINE:\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\PowerShell\ModuleLogging') do
+  describe registry_key('HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\PowerShell\ModuleLogging') do
     it { should exist }
     its('EnableModuleLogging') { should eq 1 }
   end
-  describe registry_key('HKEY_LOCAL_MACHINE:\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\PowerShell\ModuleLogging \ModuleNames') do
+  describe registry_key('HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\PowerShell\ModuleLogging \ModuleNames') do
     it { should exist }
     its('*') { should eq '*' }
   end
@@ -28,7 +28,7 @@ if powershellblocklogging_enabled
     title 'PowerShell Script Block Logging'
     desc 'Enabling PowerShell script block logging will record detailed information from the processing of PowerShell commands and scripts'
     ref url: 'https://www.fireeye.com/blog/threat-research/2016/02/greater_visibilityt.html'
-    describe registry_key('HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging') do
+    describe registry_key('HKLM\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging') do
       it { should exist }
       its('EnableScriptBlockLogging') { should eq 1 }
     end
@@ -40,7 +40,7 @@ else
     desc 'Disabling PowerShell script block logging will record detailed information from the processing of PowerShell commands and scripts'
     tag cis: '18.9.84.1'
     ref 'CIS Microsoft Windows Server 2012 R2 Benchmark', url: 'https://benchmarks.cisecurity.org/tools2/windows/CIS_Microsoft_Windows_Server_2012_R2_Benchmark_v2.2.1.pdf'
-    describe registry_key('HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging') do
+    describe registry_key('HKLM\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging') do
       it { should exist }
       its('EnableScriptBlockLogging') { should eq 0 }
     end
@@ -53,7 +53,7 @@ if powershelltranscription_enabled
     title 'PowerShell Transcription'
     desc 'Transcription creates a unique record of every PowerShell session, including all input and output, exactly as it appears in the session.'
     ref url: 'https://www.fireeye.com/blog/threat-research/2016/02/greater_visibilityt.html'
-    describe registry_key('HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcription') do
+    describe registry_key('HKLM\SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcription') do
       it { should exist }
       its('EnableTranscripting') { should eq 1 }
     end
@@ -65,7 +65,7 @@ else
     desc 'Transcription creates a unique record of every PowerShell session, including all input and output, exactly as it appears in the session.'
     tag cis: '18.9.84.2'
     ref 'CIS Microsoft Windows Server 2012 R2 Benchmark', url: 'https://benchmarks.cisecurity.org/tools2/windows/CIS_Microsoft_Windows_Server_2012_R2_Benchmark_v2.2.1.pdf'
-    describe registry_key('HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcription') do
+    describe registry_key('HKLM\SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcription') do
       it { should exist }
       its('EnableTranscripting') { should eq 0 }
     end
@@ -85,9 +85,9 @@ control 'powershell-remove-v2' do
   #   its('stdout') { should_not eq '' }
   # end
   describe powershell('Get-WindowsOptionalFeature -Online | where FeatureName -eq MicrosoftWindowsPowerShellV2') do
-    its('stdout') { should eq '' }
+    its('stdout') { should match /Disabled/ }
   end
   describe powershell('Get-WindowsOptionalFeature -Online | where FeatureName -eq MicrosoftWindowsPowerShellV2Root') do
-    its('stdout') { should eq '' }
+    its('stdout') { should match /Disabled/ }
   end
 end
