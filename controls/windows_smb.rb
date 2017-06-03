@@ -11,4 +11,10 @@ control 'smb-101' do
     it { should exist }
     its('SMB1') { should eq 0 }
   end
+  describe command('DSIM /online /get-feature /format-table | findstr /i SMB1Protocol | findstr Disabled') do
+    its('stdout') { should_not eq '' }
+  end
+  describe powershell('Get-WindowsOptionalFeature -Online | where FeatureName -eq SMB1Protocol') do
+    its('matcher') { should eq '' }
+  end
 end
