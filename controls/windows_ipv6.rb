@@ -9,7 +9,7 @@ unless ipv6_tunnels
     impact 0.7
     title 'IPv6 Tunnels: ISATAP'
     desc 'Ensure ISATAP is disabled and no interface is present'
-    describe command('ipconfig /all | findstr /i "Tunnel adapter isatap"') do
+    describe command('ipconfig /all | findstr /i "isatap"') do
       its('stdout') { should eq '' }
     end
   end
