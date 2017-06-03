@@ -71,3 +71,22 @@ else
     end
   end
 end
+
+control 'powershell-remove-v2' do
+  impact 1.0
+  title 'PowerShell v2 not present'
+  desc 'Avoid attacks downgrading Powershell v2 by uninstalling older releases'
+  ref url: 'http://www.leeholmes.com/blog/2017/03/17/detecting-and-preventing-powershell-downgrade-attacks/'
+  describe command('DSIM /online /get-feature /format-table | findstr /i MicrosoftWindowsPowerShellV2 | findstr Disabled') do
+    its('stdout') { should_not eq '' }
+  end
+  describe command('DSIM /online /get-feature /format-table | findstr /i MicrosoftWindowsPowerShellV2Root | findstr Disabled') do
+    its('stdout') { should_not eq '' }
+  end
+  describe powershell('Get-WindowsOptionalFeature -Online | where FeatureName -eq MicrosoftWindowsPowerShellV2') do
+    its('matcher') { should eq '' }
+  end
+  describe powershell('Get-WindowsOptionalFeature -Online | where FeatureName -eq MicrosoftWindowsPowerShellV2Root') do
+    its('matcher') { should eq '' }
+  end
+end
