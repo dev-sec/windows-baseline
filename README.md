@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/juju4/windows-baseline.svg?branch=master)](https://travis-ci.org/juju4/windows-baseline)
 windows-baseline
 ================
 
