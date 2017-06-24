@@ -18,4 +18,3 @@ control 'certificates-100' do
     its('matcher') { should_not match 'a9240e124ab94f16744d54c250f2df461ddc392b' }
   end
 end
-
