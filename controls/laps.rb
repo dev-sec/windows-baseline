@@ -10,8 +10,12 @@ if laps_present
     ref url: 'https://technet.microsoft.com/en-us/mt227395.aspx'
     ref url: 'https://adsecurity.org/?p=1790'
     ref url: 'http://www.petenetlive.com/KB/Article/0001059'
-    describe file('c:/Program Files/CSE/AdmPwd.dll') do
+   describe file('c:/Program Files/LAPS/CSE/AdmPwd.dll') do
       it { should be_file }
+    end
+    describe registry_key('HKLM\Software\Microsoft\Policies\Microsoft Services\AdmPwd') do
+      it { should exist }
+      its('AdmPwdEnabled') { should eq 1 }
     end
   end
 end
