@@ -33,6 +33,8 @@ end
 control 'windows-account-100' do
   impact 1.0
   title 'Windows Remote Desktop Configured to Only Allow System Administrators Access'
+## FIXME! Admin should be blocked too. non-privileged first and elevated after
+#   ref url: 'https://blogs.technet.microsoft.com/secguide/2014/09/02/blocking-remote-use-of-local-accounts/'
   describe security_policy do
     # verifies that only the 'Administrators' group has remote access
     its('SeRemoteInteractiveLogonRight') { should eq ['S-1-5-32-544'] }
