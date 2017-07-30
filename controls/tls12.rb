@@ -20,6 +20,7 @@ if tls12_check
       it { should exist }
       its('DisabledByDefault') { should eq 0 }
       its('Enabled') { should eq 1 }
+    end
   end
 
   control 'sslv3-1' do
