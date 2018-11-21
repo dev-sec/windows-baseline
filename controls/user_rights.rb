@@ -7,7 +7,7 @@ control 'cis-access-cred-manager-2.2.1' do
   title '2.2.1 Set Access Credential Manager as a trusted caller to No One'
   desc 'Set Access Credential Manager as a trusted caller to No One'
   describe security_policy do
-    its('SeTrustedCredManAccessPrivilege') { should eq ['S-1-0-0'] }
+    its('SeTrustedCredManAccessPrivilege') { should eq [] }
   end
 end
 
