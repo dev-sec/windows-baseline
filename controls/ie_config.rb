@@ -1,4 +1,4 @@
-tle 'Windows IE Configuration'
+title 'Windows IE Configuration'
 
 control 'windows-ie-101' do
   impact 1.0
