@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 title 'Windows PowerShell'
 
 control 'powershell-script-blocklogging' do

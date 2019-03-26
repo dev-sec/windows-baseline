@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 title 'Windows Privacy'
 
 control 'microsoft-online-accounts' do

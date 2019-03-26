@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 title 'Windows RDP Configuration'
 
 control 'windows-rdp-100' do

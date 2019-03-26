@@ -1,6 +1,4 @@
-# encoding: utf-8
-
-title 'Windows IE Configuration'
+tle 'Windows IE Configuration'
 
 control 'windows-ie-101' do
   impact 1.0

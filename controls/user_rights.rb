@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 title 'User Rights Assignment'
 
 control 'cis-access-cred-manager-2.2.1' do

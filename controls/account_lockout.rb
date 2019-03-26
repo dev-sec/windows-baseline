@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 title 'Account Lockout Policy'
 
 control 'cis-account-lockout-duration-1.2.1' do
