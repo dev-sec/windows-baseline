@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 title 'Password Policy'
 
 control 'cis-enforce-password-history-1.1.1' do

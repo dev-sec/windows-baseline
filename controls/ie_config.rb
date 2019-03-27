@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 title 'Windows IE Configuration'
 
 control 'windows-ie-101' do

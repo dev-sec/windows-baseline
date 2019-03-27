@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 title 'Windows Access Configuration'
 
 control 'windows-base-100' do

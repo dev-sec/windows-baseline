@@ -1,5 +1,19 @@
 # Change Log
 
+## [1.1.2](https://github.com/dev-sec/windows-baseline/tree/1.1.2) (2019-03-26)
+[Full Changelog](https://github.com/dev-sec/windows-baseline/compare/1.1.0...1.1.2)
+
+**Closed issues:**
+
+- boolean 'or' logic for describe block [\#21](https://github.com/dev-sec/windows-baseline/issues/21)
+
+**Merged pull requests:**
+
+- Update issue templates [\#24](https://github.com/dev-sec/windows-baseline/pull/24) ([rndmh3ro](https://github.com/rndmh3ro))
+- fixing control for 'cis-access-cred-manager-2.2.1' [\#23](https://github.com/dev-sec/windows-baseline/pull/23) ([wer-sce](https://github.com/wer-sce))
+- Fixed spelling error [\#17](https://github.com/dev-sec/windows-baseline/pull/17) ([hannah-radish](https://github.com/hannah-radish))
+- Move SMB1 control to windows-baseline [\#16](https://github.com/dev-sec/windows-baseline/pull/16) ([yvovandoorn](https://github.com/yvovandoorn))
+
 ## [1.1.0](https://github.com/dev-sec/windows-baseline/tree/1.1.0) (2017-05-08)
 [Full Changelog](https://github.com/dev-sec/windows-baseline/compare/1.0.1...1.1.0)
 

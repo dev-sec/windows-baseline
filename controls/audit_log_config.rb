@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 title 'Windows Audit & Logging Configuration'
 
 control 'windows-audit-100' do
