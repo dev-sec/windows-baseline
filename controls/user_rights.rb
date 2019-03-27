@@ -5,7 +5,7 @@ control 'cis-access-cred-manager-2.2.1' do
   title '2.2.1 Set Access Credential Manager as a trusted caller to No One'
   desc 'Set Access Credential Manager as a trusted caller to No One'
   describe security_policy do
-    its('SeTrustedCredManAccessPrivilege') { should eq ['S-1-0-0'] }
+    its('SeTrustedCredManAccessPrivilege') { should eq [] }
   end
 end
 
@@ -14,7 +14,7 @@ control 'cis-network-access-2.2.2' do
   title '2.2.2 Set Access this computer from the network'
   desc 'Set Access this computer from the network'
   describe security_policy do
-    its('SeNetworkLogonRight') { should eq ['S-1-0-0'] }
+    its('SeNetworkLogonRight') { should eq [] }
   end
 end
 
@@ -23,7 +23,7 @@ control 'cis-act-as-os-2.2.3' do
   title '2.2.3 Set Act as part of the operating system to No One'
   desc 'Set Act as part of the operating system to No One'
   describe security_policy do
-    its('SeTcbPrivilege') { should eq ['S-1-0-0'] }
+    its('SeTcbPrivilege') { should eq [] }
   end
 end
 
