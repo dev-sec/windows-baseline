@@ -440,7 +440,7 @@ control 'windows-139' do
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\WindowsFirewall\\PublicProfile') do
     it { should exist }
     it { should have_property 'DisableNotifications' }
-    its('DisableNotifications') { should eq 0 }
+    its('DisableNotifications') { should eq 1 }
   end
 end
 

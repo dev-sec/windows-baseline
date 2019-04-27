@@ -1,24 +1,24 @@
 title 'advanced windows security from best practices'
 
-control 'windows-base-100' do
-  impact 1.0
-  title 'Enable Strong Encryption for Windows Network Sessions on Clients'
-  desc 'Microsoft has implemented a variety of security support providers for use with RPC sessions. In a homogenous Windows environment, all of the options should be enabled and testing should be performed in a heterogeneous environment to determine the maximum-security level that provides reliable functionality.'
-  describe registry_key('HKLM\System\CurrentControlSet\Control\Lsa\MSV1_0') do
-    it { should exist }
-    its('NtlmMinClientSec') { should eq 537_395_200 }
-  end
-end
+# control 'windows-base-100' do
+#   impact 1.0
+#   title 'Enable Strong Encryption for Windows Network Sessions on Clients'
+#   desc 'Microsoft has implemented a variety of security support providers for use with RPC sessions. In a homogenous Windows environment, all of the options should be enabled and testing should be performed in a heterogeneous environment to determine the maximum-security level that provides reliable functionality.'
+#   describe registry_key('HKLM\System\CurrentControlSet\Control\Lsa\MSV1_0') do
+#     it { should exist }
+#     its('NtlmMinClientSec') { should eq 537_395_200 }
+#   end
+# end
 
-control 'windows-base-101' do
-  impact 1.0
-  title 'Enable Strong Encryption for Windows Network Sessions on Servers'
-  desc 'Windows has implemented a variety of security support providers for use with RPC sessions. In a homogenous Windows environment, all of the options should be enabled and testing should be performed in a heterogeneous environment to determine the maximum-security level that provides reliable functionality.'
-  describe registry_key('HKLM\System\CurrentControlSet\Control\Lsa\MSV1_0') do
-    it { should exist }
-    its('NtlmMinServerSec') { should eq 537_395_200 }
-  end
-end
+# control 'windows-base-101' do
+#   impact 1.0
+#   title 'Enable Strong Encryption for Windows Network Sessions on Servers'
+#   desc 'Windows has implemented a variety of security support providers for use with RPC sessions. In a homogenous Windows environment, all of the options should be enabled and testing should be performed in a heterogeneous environment to determine the maximum-security level that provides reliable functionality.'
+#   describe registry_key('HKLM\System\CurrentControlSet\Control\Lsa\MSV1_0') do
+#     it { should exist }
+#     its('NtlmMinServerSec') { should eq 537_395_200 }
+#   end
+# end
 
 control 'windows-ie-101' do
   impact 1.0
