@@ -1,5 +1,12 @@
 # Change Log
 
+## [2.0.0](https://github.com/dev-sec/windows-baseline/tree/2.0.0) (2019-04-27)
+[Full Changelog](https://github.com/dev-sec/windows-baseline/compare/1.1.2...2.0.0)
+
+**Merged pull requests:**
+
+- Update common [\#26](https://github.com/dev-sec/windows-baseline/pull/26) ([atomic111](https://github.com/atomic111))
+
 ## [1.1.2](https://github.com/dev-sec/windows-baseline/tree/1.1.2) (2019-03-26)
 [Full Changelog](https://github.com/dev-sec/windows-baseline/compare/1.1.0...1.1.2)
 
