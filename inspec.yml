@@ -7,6 +7,6 @@ copyright: DevSec Hardening Framework Team
 copyright_email: hello@dev-sec.io
 license: Apache-2.0
 summary: Baseline for best-practice Windows OS hardening
-version: 1.1.2
+version: 1.2.0
 supports:
   - os-family: windows

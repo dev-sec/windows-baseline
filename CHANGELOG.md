@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.2.0](https://github.com/dev-sec/windows-baseline/tree/1.2.0) (2019-05-15)
+[Full Changelog](https://github.com/dev-sec/windows-baseline/compare/1.1.2...1.2.0)
+
+**Merged pull requests:**
+
+- correct license style and bump version to 1.1.3 [\#28](https://github.com/dev-sec/windows-baseline/pull/28) ([atomic111](https://github.com/atomic111))
+- Update common [\#26](https://github.com/dev-sec/windows-baseline/pull/26) ([atomic111](https://github.com/atomic111))
+
 ## [1.1.2](https://github.com/dev-sec/windows-baseline/tree/1.1.2) (2019-03-26)
 [Full Changelog](https://github.com/dev-sec/windows-baseline/compare/1.1.0...1.1.2)
 
