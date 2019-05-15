@@ -1,5 +1,12 @@
 # Change Log
 
+## [2.0.0](https://github.com/dev-sec/windows-baseline/tree/2.0.0) (2019-05-15)
+[Full Changelog](https://github.com/dev-sec/windows-baseline/compare/1.2.0...2.0.0)
+
+**Merged pull requests:**
+
+- New windows cis profile for win2012r2 and 2016 [\#27](https://github.com/dev-sec/windows-baseline/pull/27) ([atomic111](https://github.com/atomic111))
+
 ## [1.2.0](https://github.com/dev-sec/windows-baseline/tree/1.2.0) (2019-05-15)
 [Full Changelog](https://github.com/dev-sec/windows-baseline/compare/1.1.2...1.2.0)
 
@@ -21,6 +28,7 @@
 - fixing control for 'cis-access-cred-manager-2.2.1' [\#23](https://github.com/dev-sec/windows-baseline/pull/23) ([wer-sce](https://github.com/wer-sce))
 - Fixed spelling error [\#17](https://github.com/dev-sec/windows-baseline/pull/17) ([hannah-radish](https://github.com/hannah-radish))
 - Move SMB1 control to windows-baseline [\#16](https://github.com/dev-sec/windows-baseline/pull/16) ([yvovandoorn](https://github.com/yvovandoorn))
+- Switched fron Nil to Nobody SID due to mismatch on 2012R2 [\#2](https://github.com/dev-sec/windows-baseline/pull/2) ([grdnrio](https://github.com/grdnrio))
 
 ## [1.1.0](https://github.com/dev-sec/windows-baseline/tree/1.1.0) (2017-05-08)
 [Full Changelog](https://github.com/dev-sec/windows-baseline/compare/1.0.1...1.1.0)
@@ -49,7 +57,6 @@
 
 - Removed per control licensing as repo is under Apache 2.0 [\#5](https://github.com/dev-sec/windows-baseline/pull/5) ([grdnrio](https://github.com/grdnrio))
 - 1.0.0 [\#3](https://github.com/dev-sec/windows-baseline/pull/3) ([chris-rock](https://github.com/chris-rock))
-- Switched fron Nil to Nobody SID due to mismatch on 2012R2 [\#2](https://github.com/dev-sec/windows-baseline/pull/2) ([grdnrio](https://github.com/grdnrio))
 - Joeg/sid refactor [\#1](https://github.com/dev-sec/windows-baseline/pull/1) ([grdnrio](https://github.com/grdnrio))
 
 
