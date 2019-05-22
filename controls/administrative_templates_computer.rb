@@ -52,7 +52,7 @@ control 'windows-177' do
   impact 1.0
   tag 'windows': %w[2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
-  tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.1.2.1'
+  tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.1.2.2'
   tag 'level': '1'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
@@ -1040,7 +1040,7 @@ control 'windows-214' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.5.14.1'
-  tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.4.14.1'
+  tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.5.14.1'
   tag 'level': '1'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
@@ -1064,7 +1064,7 @@ control 'windows-215' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.5.19.2.1'
-  tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.4.19.2.1'
+  tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.5.19.2.1'
   tag 'level': '2'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
@@ -4039,7 +4039,7 @@ control 'windows-334' do
   impact 1.0
   tag 'windows': %w[2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
-  tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.79.1'
+  tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.79.1.1'
   tag 'level': '1'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
