@@ -3108,9 +3108,9 @@ end
 
 control 'windows-296' do
   title 'Ensure \'System: Specify the maximum log file size (KB)\' is set to \'Enabled: 32,768 or greater\''
-  desc 'Diese Richtlinieneinstellung gibt die maximale Größe der Protokolldatei in Kilobyte an. Die maximale Protokolldateigröße kann zwischen 1 Megabyte (1.024 Kilobyte) und 2 Terabyte (2.147.483.647 Kilobyte) in Kilobyte-Schritten konfiguriert werden.
+  desc 'Diese Richtlinieneinstellung gibt die maximale GroBe der Protokolldatei in Kilobyte an. Die maximale ProtokolldateigroBe kann zwischen 1 Megabyte (1.024 Kilobyte) und 2 Terabyte (2.147.483.647 Kilobyte) in Kilobyte-Schritten konfiguriert werden.
 
-  Der empfohlene Status für diese Einstellung ist: Enabled: 32,768 or greater.
+  Der empfohlene Status fur diese Einstellung ist: Enabled: 32,768 or greater.
   Es wird hier 262,144 kB empfohlen'
   impact 1.0
   tag 'windows': %w[2012R2 2016 2019]
