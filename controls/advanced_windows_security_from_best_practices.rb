@@ -71,7 +71,7 @@ control 'windows-ms-technet-101' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
@@ -93,7 +93,7 @@ control 'windows-ms-technet-102' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
@@ -115,7 +115,7 @@ control 'windows-ms-technet-103' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
@@ -137,7 +137,7 @@ control 'windows-ms-technet-104' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
@@ -159,7 +159,7 @@ control 'windows-ms-technet-105' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
@@ -181,7 +181,7 @@ control 'windows-ms-technet-106' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
@@ -203,7 +203,7 @@ control 'windows-ms-technet-107' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
@@ -225,7 +225,7 @@ control 'windows-ms-technet-108' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
@@ -247,7 +247,7 @@ control 'windows-ms-technet-109' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
@@ -269,7 +269,7 @@ control 'windows-ms-technet-110' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
@@ -357,7 +357,7 @@ control 'windows-ms-technet-114' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
@@ -423,7 +423,7 @@ control 'windows-ms-technet-117' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
@@ -445,7 +445,7 @@ control 'windows-ms-technet-118' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
@@ -489,7 +489,7 @@ control 'windows-ms-technet-120' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
@@ -511,7 +511,7 @@ control 'windows-ms-technet-121' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
@@ -533,7 +533,7 @@ control 'windows-ms-technet-122' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
@@ -577,7 +577,7 @@ control 'windows-ms-technet-124' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
@@ -621,7 +621,7 @@ control 'windows-ms-technet-126' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
@@ -643,7 +643,7 @@ control 'windows-ms-technet-127' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
@@ -665,7 +665,7 @@ control 'windows-ms-technet-128' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
@@ -687,7 +687,7 @@ control 'windows-ms-technet-129' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
@@ -709,7 +709,7 @@ control 'windows-ms-technet-130' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
@@ -1062,7 +1062,7 @@ control 'windows-ms-technet-146' do
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
-  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegrität']
+  tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Microsoft', url: 'https://docs.microsoft.com/de-de/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server'
