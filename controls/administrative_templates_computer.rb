@@ -3108,14 +3108,13 @@ end
 
 control 'windows-296' do
   title 'Ensure \'System: Specify the maximum log file size (KB)\' is set to \'Enabled: 32,768 or greater\''
-  desc 'Diese Richtlinieneinstellung gibt die maximale GroBe der Protokolldatei in Kilobyte an. Die maximale ProtokolldateigroBe kann zwischen 1 Megabyte (1.024 Kilobyte) und 2 Terabyte (2.147.483.647 Kilobyte) in Kilobyte-Schritten konfiguriert werden.
+  desc 'This policy setting specifies the maximum size of the log file in kilobytes. The maximum log file size can be configured between 1 megabyte (1,024 kilobytes) and 4 terabytes (4,194,240 kilobytes) in kilobyte increments.
 
-  Der empfohlene Status fur diese Einstellung ist: Enabled: 32,768 or greater.
-  Es wird hier 262,144 kB empfohlen'
+  The recommended state for this setting is: Enabled: 32,768 or greater.'
   impact 1.0
   tag 'windows': %w[2012R2 2016 2019]
   tag 'profile': ['Domain Controller', 'Member Server']
-  tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.26.4.4'
+  tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.26.4.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.26.4.2'
   tag 'level': '1'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration'] # FIXME: check Baustein
