@@ -82,7 +82,6 @@ control 'windows-ms-technet-101' do
   describe service('AJRouter') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -104,7 +103,6 @@ control 'windows-ms-technet-102' do
   describe service('ALG') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -126,7 +124,6 @@ control 'windows-ms-technet-103' do
   describe service('AppMgmt') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -148,7 +145,6 @@ control 'windows-ms-technet-104' do
   describe service('AudioEndpointBuilder') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -170,7 +166,6 @@ control 'windows-ms-technet-105' do
   describe service('Audiosrv') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -192,7 +187,6 @@ control 'windows-ms-technet-106' do
   describe service('AxInstSV') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -214,7 +208,6 @@ control 'windows-ms-technet-107' do
   describe service('Bthserv') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -236,7 +229,6 @@ control 'windows-ms-technet-108' do
   describe service('DcpSvc') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -258,7 +250,6 @@ control 'windows-ms-technet-109' do
   describe service('DevQueryBroker') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -280,7 +271,6 @@ control 'windows-ms-technet-110' do
   describe service('DPS') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -302,7 +292,6 @@ control 'windows-ms-technet-111' do
   describe service('DiagTrack') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -324,7 +313,6 @@ control 'windows-ms-technet-112' do
   describe service('Dmwappushservice') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -346,7 +334,6 @@ control 'windows-ms-technet-113' do
   describe service('FrameServer') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -368,7 +355,6 @@ control 'windows-ms-technet-114' do
   describe service('hidserv') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -390,7 +376,6 @@ control 'windows-ms-technet-115' do
   describe service('Icssvc') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -412,7 +397,6 @@ control 'windows-ms-technet-116' do
   describe service('lfsvc') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -434,7 +418,6 @@ control 'windows-ms-technet-117' do
   describe service('LicenseManager') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -456,7 +439,6 @@ control 'windows-ms-technet-118' do
   describe service('MapsBroker') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -478,7 +460,6 @@ control 'windows-ms-technet-119' do
   describe service('NcbService') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -500,7 +481,6 @@ control 'windows-ms-technet-120' do
   describe service('PcaSvc') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -522,7 +502,6 @@ control 'windows-ms-technet-121' do
   describe service('PhoneSvc') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -544,7 +523,6 @@ control 'windows-ms-technet-122' do
   describe service('PrintNotify') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -566,7 +544,6 @@ control 'windows-ms-technet-123' do
   describe service('qWave') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -588,7 +565,6 @@ control 'windows-ms-technet-124' do
   describe service('RasAuto') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -610,7 +586,6 @@ control 'windows-ms-technet-125' do
   describe service('RasMan') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -632,7 +607,6 @@ control 'windows-ms-technet-126' do
   describe service('RmSvc') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -654,7 +628,6 @@ control 'windows-ms-technet-127' do
   describe service('RpcLocator') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -676,7 +649,6 @@ control 'windows-ms-technet-128' do
   describe service('RSoPProv') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -698,7 +670,6 @@ control 'windows-ms-technet-129' do
   describe service('Sacsvr') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -720,7 +691,6 @@ control 'windows-ms-technet-130' do
   describe service('ScDeviceEnum') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -742,7 +712,6 @@ control 'windows-ms-technet-131' do
   describe service('SCPolicySvc') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -764,7 +733,6 @@ control 'windows-ms-technet-132' do
   describe service('SensorDataService') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -786,7 +754,6 @@ control 'windows-ms-technet-133' do
   describe service('SensorService') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -808,7 +775,6 @@ control 'windows-ms-technet-134' do
   describe service('SensrSvc') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -830,7 +796,6 @@ control 'windows-ms-technet-135' do
   describe service('SharedAccess') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -852,7 +817,6 @@ control 'windows-ms-technet-136' do
   describe service('ShellHWDetection') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -875,7 +839,6 @@ control 'windows-ms-technet-137' do
   describe service('SSDPSRV') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -897,7 +860,6 @@ control 'windows-ms-technet-138' do
   describe service('stisvc') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -919,7 +881,6 @@ control 'windows-ms-technet-139' do
   describe service('TabletInputService') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -941,7 +902,6 @@ control 'windows-ms-technet-140' do
   describe service('upnphost') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -963,7 +923,6 @@ control 'windows-ms-technet-141' do
   describe service('WalletService') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -985,7 +944,6 @@ control 'windows-ms-technet-142' do
   describe service('WbioSrvc') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -1007,7 +965,6 @@ control 'windows-ms-technet-143' do
   describe service('wercplsupport') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -1029,7 +986,6 @@ control 'windows-ms-technet-144' do
   describe service('WiaRpc') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -1051,7 +1007,6 @@ control 'windows-ms-technet-145' do
   describe service('wisvc') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -1073,7 +1028,6 @@ control 'windows-ms-technet-146' do
   describe service('wlidsvc') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -1095,7 +1049,6 @@ control 'windows-ms-technet-147' do
   describe service('WPDBusEnum') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -1117,7 +1070,6 @@ control 'windows-ms-technet-148' do
   describe service('WpnService') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -1139,7 +1091,6 @@ control 'windows-ms-technet-149' do
   describe service('XblAuthManager') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -1161,7 +1112,6 @@ control 'windows-ms-technet-150' do
   describe service('XblGameSave') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -1183,7 +1133,6 @@ control 'windows-ms-technet-152' do
   describe service('AppXSVC') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -1205,7 +1154,6 @@ control 'windows-ms-technet-153' do
   describe service('BrokerInfrastructure') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -1227,7 +1175,6 @@ control 'windows-ms-technet-154' do
   describe service('ClipSVC') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
@@ -1249,7 +1196,6 @@ control 'windows-ms-technet-155' do
   describe service('SNMPTRAP') do
     it { should be_installed }
     it { should_not be_enabled }
-    it { should_not be_running }
   end
 end
 
