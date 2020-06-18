@@ -2,116 +2,116 @@
 name: windows-baseline
 title: DevSec Windows Security Baseline
 summary: An InSpec Compliance Profile that covers CIS Microsoft Windows Server 2012R2, 2016 RTM (Release 1607) Benchmark Level 1 and 2 and additional controls from MS technet.
-version: 2.1.1
+version: 2.0.1
 maintainer: DevSec Hardening Framework Team
 copyright: DevSec Hardening Framework Team
 copyright_email: hello@dev-sec.io
 license: Apache-2.0
 supports:
-  - platform-family: windows
+    - platform-family: windows
 attributes:
-  - name: level_1_or_2
-    required: false
-    description: 'define if you want to execute Level 1 or (Level 1 and Level 2)'
-    value: 1,
-    type: numeric
-  - name: ms_or_dc
-    required: false
-    description: 'define if you want to execute the profile in the context of a Memeber Server (MS) or Domain Controler (DC)'
-    value: 'MS'
-    type: string
-  - name: password_history_size
-    required: false
-    description: 'define password history size'
-    value: 24
-    type: numeric
-  - name: maximum_password_age
-    required: false
-    description: 'define MaximumPasswordAge'
-    value: 60
-    type: numeric
-  - name: se_network_logon_right
-    required: false
-    description: 'define which users are allowed to access this computer from the network'
-    value: ['S-1-5-9', 'S-1-5-32-544']
-    type: array
-  - name: se_interactive_logon_right
-    required: false
-    description: 'define which users are allowed to log on locally'
-    value: ['S-1-5-32-544']
-    type: array
-  - name: se_remote_interactive_logon_right
-    required: false
-    description: 'define which users are allowed to log on through Remote Desktop Services'
-    value: ['S-1-5-32-544']
-    type: array
-  - name: se_backup_privilege
-    required: false
-    description: 'define which users are allowed to backup files and directories'
-    value: ['S-1-5-32-544']
-    type: array
-  - name: se_systemtime_privilege
-    required: false
-    description: 'define which users are allowed to change system time'
-    value: ['S-1-5-19', 'S-1-5-32-544']
-    type: array
-  - name: se_time_zone_privilege
-    required: false
-    description: 'define which users are allowed to change system time zone'
-    value: ['S-1-5-19', 'S-1-5-32-544']
-    type: array
-  - name: se_create_symbolic_link_privilege
-    required: false
-    description: 'define which users are allowed to create symbolic links'
-    value: ['S-1-5-32-544']
-    type: array
-  - name: se_deny_network_logon_right
-    required: false
-    description: 'define which users are not allowed to access this computer from the network'
-    value: ['S-1-5-32-546']
-    type: array
-  - name: se_deny_remote_interactive_logon_right
-    required: false
-    description: 'define which users are not allowed to log on through Remote Desktop Services'
-    value: ['S-1-5-32-546']
-    type: array
-  - name: se_enable_delegation_privilege
-    required: false
-    description: 'define which users are allowed to enable computer and user accounts to be trusted'
-    value: []
-    type: array
-  - name: se_impersonate_privilege
-    required: false
-    description: 'define which users are allowed to impersonate a client after authentication'
-    value: ['S-1-5-19', 'S-1-5-20', 'S-1-5-32-544', 'S-1-5-6']
-    type: array
-  - name: se_load_driver_privilege
-    required: false
-    description: 'define which users are allowed to impersonate a client after authentication'
-    value: ['S-1-5-32-544']
-    type: array
-  - name: se_batch_logon_right
-    required: false
-    description: 'define which users are allowed to log on as a batch job'
-    value: ['S-1-5-32-544', 'S-1-5-32-551']
-    type: array
-  - name: se_security_privilege
-    required: false
-    description: 'define which users are allowed to manage auditing and security logs'
-    value: ['S-1-5-32-544']
-    type: array
-  - name: se_assign_primary_token_privilege
-    required: false
-    description: 'define which users are allowed to replace a process level token'
-    value: ['S-1-5-19', 'S-1-5-20']
-    type: array
-  - name: se_restore_privilege
-    required: false
-    description: 'define which users are allowed to restore files and directories'
-    value: ['S-1-5-32-544']
-    type: array
-  - name: hklm_null_session_pipes
-    required: false
-    description: 'define named pipes that can be accessed anonymously'
-    value: []
-    type: array
+    - name: level_1_or_2
+      required: false
+      description: 'define if you want to execute Level 1 or (Level 1 and Level 2)'
+      value: 1,
+      type: numeric
+    - name: ms_or_dc
+      required: false
+      description: 'define if you want to execute the profile in the context of a Memeber Server (MS) or Domain Controler (DC)'
+      value: 'MS'
+      type: string
+    - name: password_history_size
+      required: false
+      description: 'define password history size'
+      value: 24
+      type: numeric
+    - name: maximum_password_age
+      required: false
+      description: 'define MaximumPasswordAge'
+      value: 60
+      type: numeric
+    - name: se_network_logon_right
+      required: false
+      description: 'define which users are allowed to access this computer from the network'
+      value: ['S-1-5-9', 'S-1-5-32-544']
+      type: array
+    - name: se_interactive_logon_right
+      required: false
+      description: 'define which users are allowed to log on locally'
+      value: ['S-1-5-32-544']
+      type: array
+    - name: se_remote_interactive_logon_right
+      required: false
+      description: 'define which users are allowed to log on through Remote Desktop Services'
+      value: ['S-1-5-32-544']
+      type: array
+    - name: se_backup_privilege
+      required: false
+      description: 'define which users are allowed to backup files and directories'
+      value: ['S-1-5-32-544']
+      type: array
+    - name: se_systemtime_privilege
+      required: false
+      description: 'define which users are allowed to change system time'
+      value: ['S-1-5-19', 'S-1-5-32-544']
+      type: array
+    - name: se_time_zone_privilege
+      required: false
+      description: 'define which users are allowed to change system time zone'
+      value: ['S-1-5-19', 'S-1-5-32-544']
+      type: array
+    - name: se_create_symbolic_link_privilege
+      required: false
+      description: 'define which users are allowed to create symbolic links'
+      value: ['S-1-5-32-544']
+      type: array
+    - name: se_deny_network_logon_right
+      required: false
+      description: 'define which users are not allowed to access this computer from the network'
+      value: ['S-1-5-32-546']
+      type: array
+    - name: se_deny_remote_interactive_logon_right
+      required: false
+      description: 'define which users are not allowed to log on through Remote Desktop Services'
+      value: ['S-1-5-32-546']
+      type: array
+    - name: se_enable_delegation_privilege
+      required: false
+      description: 'define which users are allowed to enable computer and user accounts to be trusted'
+      value: []
+      type: array
+    - name: se_impersonate_privilege
+      required: false
+      description: 'define which users are allowed to impersonate a client after authentication'
+      value: ['S-1-5-19', 'S-1-5-20', 'S-1-5-32-544', 'S-1-5-6']
+      type: array
+    - name: se_load_driver_privilege
+      required: false
+      description: 'define which users are allowed to impersonate a client after authentication'
+      value: ['S-1-5-32-544']
+      type: array
+    - name: se_batch_logon_right
+      required: false
+      description: 'define which users are allowed to log on as a batch job'
+      value: ['S-1-5-32-544', 'S-1-5-32-551']
+      type: array
+    - name: se_security_privilege
+      required: false
+      description: 'define which users are allowed to manage auditing and security logs'
+      value: ['S-1-5-32-544']
+      type: array
+    - name: se_assign_primary_token_privilege
+      required: false
+      description: 'define which users are allowed to replace a process level token'
+      value: ['S-1-5-19', 'S-1-5-20']
+      type: array
+    - name: se_restore_privilege
+      required: false
+      description: 'define which users are allowed to restore files and directories'
+      value: ['S-1-5-32-544']
+      type: array
+    - name: hklm_null_session_pipes
+      required: false
+      description: 'define named pipes that can be accessed anonymously'
+      value: []
+      type: array
