@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.1.4](https://github.com/dev-sec/windows-baseline/tree/2.1.4) (2020-06-27)
+
+[Full Changelog](https://github.com/dev-sec/windows-baseline/compare/2.1.3...2.1.4)
+
+**Fixed bugs:**
+
+- Fixes Readme copy and paste. Formats author table in readme [\#41](https://github.com/dev-sec/windows-baseline/pull/41) ([imjoseangel](https://github.com/imjoseangel))
+
+**Closed issues:**
+
+- copy / paste error in README.md [\#38](https://github.com/dev-sec/windows-baseline/issues/38)
+
 ## [2.1.3](https://github.com/dev-sec/windows-baseline/tree/2.1.3) (2020-06-18)
 
 [Full Changelog](https://github.com/dev-sec/windows-baseline/compare/2.1.2...2.1.3)
@@ -34,7 +46,6 @@
 - Replace German characters to avoid exec failures and bump version to 2.1.1 [\#36](https://github.com/dev-sec/windows-baseline/pull/36) ([alexpop](https://github.com/alexpop))
 - Update administrative\_templates\_computer.rb [\#32](https://github.com/dev-sec/windows-baseline/pull/32) ([Staggerlee011](https://github.com/Staggerlee011))
 - fix missing "o" in windows-245 [\#31](https://github.com/dev-sec/windows-baseline/pull/31) ([rndmh3ro](https://github.com/rndmh3ro))
-- New windows cis profile for win2012r2 and 2016 [\#27](https://github.com/dev-sec/windows-baseline/pull/27) ([atomic111](https://github.com/atomic111))
 
 ## [2.1.0](https://github.com/dev-sec/windows-baseline/tree/2.1.0) (2019-05-16)
 
@@ -47,6 +58,10 @@
 ## [2.0.0](https://github.com/dev-sec/windows-baseline/tree/2.0.0) (2019-05-15)
 
 [Full Changelog](https://github.com/dev-sec/windows-baseline/compare/1.2.0...2.0.0)
+
+**Merged pull requests:**
+
+- New windows cis profile for win2012r2 and 2016 [\#27](https://github.com/dev-sec/windows-baseline/pull/27) ([atomic111](https://github.com/atomic111))
 
 ## [1.2.0](https://github.com/dev-sec/windows-baseline/tree/1.2.0) (2019-05-15)
 
