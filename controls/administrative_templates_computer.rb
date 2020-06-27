@@ -1932,8 +1932,8 @@ control 'windows-249' do
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\MitigationOptions') do
     it { should exist }
-    it { should have_property 'MitigationOptions_FontBocking' }
-    its('MitigationOptions_FontBocking') { should eq '1000000000000' }
+    it { should have_property 'MitigationOptions_FontBlocking' }
+    its('MitigationOptions_FontBlocking') { should eq '1000000000000' }
   end
 end
 
