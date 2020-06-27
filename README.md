@@ -80,7 +80,7 @@ We use a yml attribute file to steer the configuration, the following options ar
     define which users are allowed to impersonate a client after authentication
 
   * `se_load_driver_privilege`
-    define which users are allowed to impersonate a client after authentication
+    define which users are allowed to load and unload device drivers
 
   * `se_batch_logon_right`
     define which users are allowed to log on as a batch job
@@ -139,12 +139,12 @@ inspec exec windows-baseline --controls 'windows-001'
 
 ## License and Author
 
-|  |  |
-| ------ | --- |
-| **Author:** | Patrick Muench <patrick.muench1111@gmail.com> |
-| **Author:** | Torsten Loebner <loebnert@googlemail.com> |
-| **Copyright:** | 2019 SVA System Vertrieb Alexander GmbH |
-| **Copyright:** | 2019 Lichtblick SE |
-| **Copyright:** | 2015-2016, Chef Software, Inc |
-| **Copyright:** | DevSec Hardening Framework Team |
-| **License:** | Apache License Version 2.0 |
+|                |                                               |
+|----------------|-----------------------------------------------|
+| **Author:**    | Patrick Muench <patrick.muench1111@gmail.com> |
+| **Author:**    | Torsten Loebner <loebnert@googlemail.com>     |
+| **Copyright:** | 2019 SVA System Vertrieb Alexander GmbH       |
+| **Copyright:** | 2019 Lichtblick SE                            |
+| **Copyright:** | 2015-2016, Chef Software, Inc                 |
+| **Copyright:** | DevSec Hardening Framework Team               |
+| **License:**   | Apache License Version 2.0                    |
