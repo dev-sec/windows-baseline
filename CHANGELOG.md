@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.1.4](https://github.com/dev-sec/windows-baseline/tree/2.1.4) (2020-06-27)
+## [2.1.4](https://github.com/dev-sec/windows-baseline/tree/2.1.4) (2020-06-30)
 
 [Full Changelog](https://github.com/dev-sec/windows-baseline/compare/2.1.3...2.1.4)
 
@@ -11,6 +11,12 @@
 **Closed issues:**
 
 - copy / paste error in README.md [\#38](https://github.com/dev-sec/windows-baseline/issues/38)
+- The 'should include' does not check for unwanted accounts [\#20](https://github.com/dev-sec/windows-baseline/issues/20)
+
+**Merged pull requests:**
+
+- Fixes SeIncreaseQuotaPrivilege [\#44](https://github.com/dev-sec/windows-baseline/pull/44) ([imjoseangel](https://github.com/imjoseangel))
+- Update gems and bump profile version to 2.1.0 [\#30](https://github.com/dev-sec/windows-baseline/pull/30) ([alexpop](https://github.com/alexpop))
 
 ## [2.1.3](https://github.com/dev-sec/windows-baseline/tree/2.1.3) (2020-06-18)
 
@@ -50,10 +56,6 @@
 ## [2.1.0](https://github.com/dev-sec/windows-baseline/tree/2.1.0) (2019-05-16)
 
 [Full Changelog](https://github.com/dev-sec/windows-baseline/compare/2.0.0...2.1.0)
-
-**Merged pull requests:**
-
-- Update gems and bump profile version to 2.1.0 [\#30](https://github.com/dev-sec/windows-baseline/pull/30) ([alexpop](https://github.com/alexpop))
 
 ## [2.0.0](https://github.com/dev-sec/windows-baseline/tree/2.0.0) (2019-05-15)
 
