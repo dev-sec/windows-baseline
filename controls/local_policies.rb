@@ -1089,7 +1089,7 @@ control 'windows-058' do
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon') do
     it { should exist }
     it { should have_property 'AllocateDASD' }
-    its('AllocateDASD') { should cmp == 0 }
+    its('AllocateDASD') { should cmp 0 }
   end
 end
 

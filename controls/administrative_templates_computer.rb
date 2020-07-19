@@ -474,7 +474,7 @@ control 'windows-192' do
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon') do
     it { should exist }
     it { should have_property 'AutoAdminLogon' }
-    its('AutoAdminLogon') { should cmp == 0 }
+    its('AutoAdminLogon') { should cmp 0 }
   end
 end
 
