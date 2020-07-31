@@ -1897,7 +1897,7 @@ control 'windows-091' do
   describe registry_key('HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\LanManServer\\Parameters') do
     it { should exist }
     it { should have_property 'NullSessionPipes' }
-    its('NullSessionPipes') { should eq([]).or eq([""]) }
+    its('NullSessionPipes') { should eq([]).or eq(['']) }
   end
 end
 
