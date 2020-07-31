@@ -94,9 +94,6 @@ We use a yml attribute file to steer the configuration, the following options ar
   * `se_restore_privilege`
     define which users are allowed to restore files and directories
 
-  * `hklm_null_session_pipes`
-    define named pipes that can be accessed anonymously
-
 ## Usage
 
 InSpec makes it easy to run your tests wherever you need. More options listed here: [InSpec cli](http://inspec.io/docs/reference/cli/)
