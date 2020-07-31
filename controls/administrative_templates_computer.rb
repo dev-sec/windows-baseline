@@ -662,7 +662,7 @@ control 'windows-200' do
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon') do
     it { should exist }
     it { should have_property 'ScreenSaverGracePeriod' }
-    its('ScreenSaverGracePeriod') { should be <= 5 }
+    its('ScreenSaverGracePeriod') { should cmp <= 5 }
   end
 end
 
