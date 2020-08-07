@@ -19,7 +19,7 @@ control 'windows-360' do
     describe registry_key(entry) do
       it { should exist }
       it { should have_property 'ScreenSaveActive' }
-      its('ScreenSaveActive') { should eq 1 }
+      its('ScreenSaveActive') { should cmp 1 }
     end
   end
 end
@@ -67,7 +67,7 @@ control 'windows-362' do
     describe registry_key(entry) do
       it { should exist }
       it { should have_property 'ScreenSaverIsSecure' }
-      its('ScreenSaverIsSecure') { should eq 1 }
+      its('ScreenSaverIsSecure') { should cmp 1 }
     end
   end
 end

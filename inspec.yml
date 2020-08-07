@@ -110,8 +110,3 @@ attributes:
       description: 'define which users are allowed to restore files and directories'
       value: ['S-1-5-32-544']
       type: array
-    - name: hklm_null_session_pipes
-      required: false
-      description: 'define named pipes that can be accessed anonymously'
-      value: []
-      type: array

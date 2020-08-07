@@ -474,7 +474,7 @@ control 'windows-192' do
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon') do
     it { should exist }
     it { should have_property 'AutoAdminLogon' }
-    its('AutoAdminLogon') { should eq 0 }
+    its('AutoAdminLogon') { should cmp 0 }
   end
 end
 
@@ -662,7 +662,7 @@ control 'windows-200' do
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon') do
     it { should exist }
     it { should have_property 'ScreenSaverGracePeriod' }
-    its('ScreenSaverGracePeriod') { should be <= 5 }
+    its('ScreenSaverGracePeriod') { should cmp <= 5 }
   end
 end
 
@@ -2970,7 +2970,7 @@ control 'windows-289' do
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\EventLog\\Application') do
     it { should exist }
     it { should have_property 'Retention' }
-    its('Retention') { should eq 0 }
+    its('Retention') { should cmp 0 }
   end
 end
 
@@ -3014,7 +3014,7 @@ control 'windows-291' do
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\EventLog\\Security') do
     it { should exist }
     it { should have_property 'Retention' }
-    its('Retention') { should eq 0 }
+    its('Retention') { should cmp 0 }
   end
 end
 
@@ -3058,7 +3058,7 @@ control 'windows-293' do
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\EventLog\\Setup') do
     it { should exist }
     it { should have_property 'Retention' }
-    its('Retention') { should eq 0 }
+    its('Retention') { should cmp 0 }
   end
 end
 
@@ -3102,7 +3102,7 @@ control 'windows-295' do
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\EventLog\\System') do
     it { should exist }
     it { should have_property 'Retention' }
-    its('Retention') { should eq 0 }
+    its('Retention') { should cmp 0 }
   end
 end
 
@@ -3968,19 +3968,19 @@ control 'windows-331' do
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Windows Defender Exploit Guard\\ASR\\Rules') do
     it { should exist }
     it { should have_property '75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84' }
-    its('75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84') { should eq 1 }
+    its('75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84') { should cmp 1 }
     it { should have_property '3b576869-a4ec-4529-8536-b80a7769e899' }
-    its('3b576869-a4ec-4529-8536-b80a7769e899') { should eq 1 }
+    its('3b576869-a4ec-4529-8536-b80a7769e899') { should cmp 1 }
     it { should have_property 'd4f940ab-401b-4efc-aadc-ad5f3c50688a' }
-    its('d4f940ab-401b-4efc-aadc-ad5f3c50688a') { should eq 1 }
+    its('d4f940ab-401b-4efc-aadc-ad5f3c50688a') { should cmp 1 }
     it { should have_property '92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b' }
-    its('92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b') { should eq 1 }
+    its('92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b') { should cmp 1 }
     it { should have_property '5beb7efe-fd9a-4556-801d-275e5ffc04cc' }
-    its('5beb7efe-fd9a-4556-801d-275e5ffc04cc') { should eq 1 }
+    its('5beb7efe-fd9a-4556-801d-275e5ffc04cc') { should cmp 1 }
     it { should have_property 'd3e037e1-3eb8-44c8-a917-57927947596d' }
-    its('d3e037e1-3eb8-44c8-a917-57927947596d') { should eq 1 }
+    its('d3e037e1-3eb8-44c8-a917-57927947596d') { should cmp 1 }
     it { should have_property 'be9ba2d9-53ea-4cdc-84e5-9b1eeee46550' }
-    its('be9ba2d9-53ea-4cdc-84e5-9b1eeee46550') { should eq 1 }
+    its('be9ba2d9-53ea-4cdc-84e5-9b1eeee46550') { should cmp 1 }
   end
 end
 
