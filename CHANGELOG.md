@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.6](https://github.com/dev-sec/windows-baseline/tree/2.1.6) (2020-08-07)
+
+[Full Changelog](https://github.com/dev-sec/windows-baseline/compare/2.1.5...2.1.6)
+
+**Closed issues:**
+
+- False Positives due to integers in strings [\#45](https://github.com/dev-sec/windows-baseline/issues/45)
+
 ## [2.1.5](https://github.com/dev-sec/windows-baseline/tree/2.1.5) (2020-07-23)
 
 [Full Changelog](https://github.com/dev-sec/windows-baseline/compare/2.1.4...2.1.5)
@@ -43,6 +51,7 @@
 
 **Merged pull requests:**
 
+- Fixes comparisons when registry key data type are REG\_SZ [\#46](https://github.com/dev-sec/windows-baseline/pull/46) ([imjoseangel](https://github.com/imjoseangel))
 - github actions release [\#39](https://github.com/dev-sec/windows-baseline/pull/39) ([micheelengronne](https://github.com/micheelengronne))
 - replace the german text to english and fix the windows 2012r2 tag [\#37](https://github.com/dev-sec/windows-baseline/pull/37) ([atomic111](https://github.com/atomic111))
 - Feature/inspec4alerts [\#33](https://github.com/dev-sec/windows-baseline/pull/33) ([imjoseangel](https://github.com/imjoseangel))
