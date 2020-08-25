@@ -1,0 +1,18 @@
+vendor/
+*.bak
+*.lock
+.envrc
+
+.vagrant
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+
+# Bundler
+Gemfile.lock
+gems.locked
+bin/*
+.bundle/*
