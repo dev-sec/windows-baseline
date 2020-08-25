@@ -4292,7 +4292,7 @@ control 'windows-344' do
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\PowerShell\\ScriptBlockLogging') do
     it { should exist }
     it { should have_property 'EnableScriptBlockLogging' }
-    its('EnableScriptBlockLogging') { should eq 0 }
+    its('EnableScriptBlockLogging') { should eq 1 }
   end
 end
 
@@ -4314,7 +4314,7 @@ control 'windows-345' do
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\PowerShell\\Transcription') do
     it { should exist }
     it { should have_property 'EnableTranscripting' }
-    its('EnableTranscripting') { should eq 0 }
+    its('EnableTranscripting') { should eq 1 }
   end
 end
 
