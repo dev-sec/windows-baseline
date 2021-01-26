@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.7](https://github.com/dev-sec/windows-baseline/tree/2.1.7) (2021-01-26)
+
+[Full Changelog](https://github.com/dev-sec/windows-baseline/compare/2.1.6...2.1.7)
+
+**Merged pull requests:**
+
+- GitHub action [\#49](https://github.com/dev-sec/windows-baseline/pull/49) ([rndmh3ro](https://github.com/rndmh3ro))
+
 ## [2.1.6](https://github.com/dev-sec/windows-baseline/tree/2.1.6) (2020-08-07)
 
 [Full Changelog](https://github.com/dev-sec/windows-baseline/compare/2.1.5...2.1.6)
@@ -7,6 +15,10 @@
 **Closed issues:**
 
 - False Positives due to integers in strings [\#45](https://github.com/dev-sec/windows-baseline/issues/45)
+
+**Merged pull requests:**
+
+- Fixes comparisons when registry key data type are REG\_SZ [\#46](https://github.com/dev-sec/windows-baseline/pull/46) ([imjoseangel](https://github.com/imjoseangel))
 
 ## [2.1.5](https://github.com/dev-sec/windows-baseline/tree/2.1.5) (2020-07-23)
 
@@ -51,7 +63,6 @@
 
 **Merged pull requests:**
 
-- Fixes comparisons when registry key data type are REG\_SZ [\#46](https://github.com/dev-sec/windows-baseline/pull/46) ([imjoseangel](https://github.com/imjoseangel))
 - github actions release [\#39](https://github.com/dev-sec/windows-baseline/pull/39) ([micheelengronne](https://github.com/micheelengronne))
 - replace the german text to english and fix the windows 2012r2 tag [\#37](https://github.com/dev-sec/windows-baseline/pull/37) ([atomic111](https://github.com/atomic111))
 - Feature/inspec4alerts [\#33](https://github.com/dev-sec/windows-baseline/pull/33) ([imjoseangel](https://github.com/imjoseangel))
@@ -92,6 +103,7 @@
 - Update common [\#26](https://github.com/dev-sec/windows-baseline/pull/26) ([atomic111](https://github.com/atomic111))
 - Update issue templates [\#24](https://github.com/dev-sec/windows-baseline/pull/24) ([rndmh3ro](https://github.com/rndmh3ro))
 - fixing control for 'cis-access-cred-manager-2.2.1' [\#23](https://github.com/dev-sec/windows-baseline/pull/23) ([wer-sce](https://github.com/wer-sce))
+- Fixed spelling error [\#17](https://github.com/dev-sec/windows-baseline/pull/17) ([hannah-radish](https://github.com/hannah-radish))
 
 ## [1.1.2](https://github.com/dev-sec/windows-baseline/tree/1.1.2) (2019-03-26)
 
@@ -103,7 +115,6 @@
 
 **Merged pull requests:**
 
-- Fixed spelling error [\#17](https://github.com/dev-sec/windows-baseline/pull/17) ([hannah-radish](https://github.com/hannah-radish))
 - Move SMB1 control to windows-baseline [\#16](https://github.com/dev-sec/windows-baseline/pull/16) ([yvovandoorn](https://github.com/yvovandoorn))
 
 ## [1.1.0](https://github.com/dev-sec/windows-baseline/tree/1.1.0) (2017-05-08)
