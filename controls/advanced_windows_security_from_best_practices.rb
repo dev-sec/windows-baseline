@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 title 'advanced windows security from best practices'
 
 # control 'windows-base-100' do

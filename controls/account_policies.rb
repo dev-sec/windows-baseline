@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 title 'account policies'
 
 control 'windows-001' do
@@ -43,7 +45,7 @@ control 'windows-002' do
     its('MaximumPasswordAge') { should be <= attribute('maximum_password_age') }
   end
   describe security_policy do
-    its('MaximumPasswordAge') { should be > 0 }
+    its('MaximumPasswordAge') { should be.positive? }
   end
 end
 
@@ -176,7 +178,7 @@ control 'windows-008' do
     its('LockoutBadCount') { should be <= 10 }
   end
   describe security_policy do
-    its('LockoutBadCount') { should be > 0 }
+    its('LockoutBadCount') { should be.positive? }
   end
 end
 

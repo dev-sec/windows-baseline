@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 title 'Administrative Templates (User)'
 
 control 'windows-360' do
@@ -15,7 +17,7 @@ control 'windows-360' do
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
-  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| x.to_s + '\\Software\\Policies\\Microsoft\\Windows\\Control Panel\\Desktop' }.each do |entry|
+  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| "#{x}\\Software\\Policies\\Microsoft\\Windows\\Control Panel\\Desktop" }.each do |entry|
     describe registry_key(entry) do
       it { should exist }
       it { should have_property 'ScreenSaveActive' }
@@ -39,7 +41,7 @@ control 'windows-361' do
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
-  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| x.to_s + '\\Software\\Policies\\Microsoft\\Windows\\Control Panel\\Desktop' }.each do |entry|
+  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| "#{x}\\Software\\Policies\\Microsoft\\Windows\\Control Panel\\Desktop" }.each do |entry|
     describe registry_key(entry) do
       it { should exist }
       it { should have_property 'SCRNSAVE.EXE' }
@@ -63,7 +65,7 @@ control 'windows-362' do
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
-  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| x.to_s + '\\Software\\Policies\\Microsoft\\Windows\\Control Panel\\Desktop' }.each do |entry|
+  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| "#{x}\\Software\\Policies\\Microsoft\\Windows\\Control Panel\\Desktop" }.each do |entry|
     describe registry_key(entry) do
       it { should exist }
       it { should have_property 'ScreenSaverIsSecure' }
@@ -87,14 +89,14 @@ control 'windows-363' do
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
-  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| x.to_s + '\\Software\\Policies\\Microsoft\\Windows\\Control Panel\\Desktop' }.each do |entry|
+  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| "#{x}\\Software\\Policies\\Microsoft\\Windows\\Control Panel\\Desktop" }.each do |entry|
     describe registry_key(entry) do
       it { should exist }
       it { should have_property 'ScreenSaveTimeOut' }
       its('ScreenSaveTimeOut') { should cmp <= 900 }
     end
   end
-  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| x.to_s + '\\Software\\Policies\\Microsoft\\Windows\\Control Panel\\Desktop' }.each do |entry|
+  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| "#{x}\\Software\\Policies\\Microsoft\\Windows\\Control Panel\\Desktop" }.each do |entry|
     describe registry_key(entry) do
       it { should exist }
       it { should have_property 'ScreenSaveTimeOut' }
@@ -118,7 +120,7 @@ control 'windows-364' do
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
-  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| x.to_s + '\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\PushNotifications' }.each do |entry|
+  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| "#{x}\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\PushNotifications" }.each do |entry|
     describe registry_key(entry) do
       it { should exist }
       it { should have_property 'NoToastApplicationNotificationOnLockScreen' }
@@ -145,7 +147,7 @@ control 'windows-365' do
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
     attribute('level_1_or_2') == 2
   end
-  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| x.to_s + '\\Software\\Policies\\Microsoft\\Assistance\\Client\\1.0' }.each do |entry|
+  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| "#{x}\\Software\\Policies\\Microsoft\\Assistance\\Client\\1.0" }.each do |entry|
     describe registry_key(entry) do
       it { should exist }
       it { should have_property 'NoImplicitFeedback' }
@@ -169,7 +171,7 @@ control 'windows-366' do
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
-  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| x.to_s + '\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Attachments' }.each do |entry|
+  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| "#{x}\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Attachments" }.each do |entry|
     describe registry_key(entry) do
       it { should exist }
       it { should have_property 'SaveZoneInformation' }
@@ -193,7 +195,7 @@ control 'windows-367' do
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
-  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| x.to_s + '\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Attachments' }.each do |entry|
+  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| "#{x}\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Attachments" }.each do |entry|
     describe registry_key(entry) do
       it { should exist }
       it { should have_property 'ScanWithAntiVirus' }
@@ -219,7 +221,7 @@ control 'windows-368' do
   only_if('Only for Windows Server 2016, 2019 and if attribute(\'level_1_or_2\') is set to 2') do
     (((os[:name].include? '2016') || (os[:name].include? '2019')) && attribute('level_1_or_2') == 2)
   end
-  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| x.to_s + '\\Software\\Policies\\Microsoft\\Windows\\CloudContent' }.each do |entry|
+  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| "#{x}\\Software\\Policies\\Microsoft\\Windows\\CloudContent" }.each do |entry|
     describe registry_key(entry) do
       it { should exist }
       it { should have_property 'ConfigureWindowsSpotlight' }
@@ -245,7 +247,7 @@ control 'windows-369' do
   only_if('Only for Windows Server 2016, 2019') do
     ((os[:name].include? '2016') || (os[:name].include? '2019'))
   end
-  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| x.to_s + '\\Software\\Policies\\Microsoft\\Windows\\CloudContent' }.each do |entry|
+  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| "#{x}\\Software\\Policies\\Microsoft\\Windows\\CloudContent" }.each do |entry|
     describe registry_key(entry) do
       it { should exist }
       it { should have_property 'DisableThirdPartySuggestions' }
@@ -271,7 +273,7 @@ control 'windows-370' do
   only_if('Only for Windows Server 2016, 2019 and if attribute(\'level_1_or_2\') is set to 2') do
     (((os[:name].include? '2016') || (os[:name].include? '2019')) && attribute('level_1_or_2') == 2)
   end
-  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| x.to_s + '\\Software\\Policies\\Microsoft\\Windows\\CloudContent' }.each do |entry|
+  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| "#{x}\\Software\\Policies\\Microsoft\\Windows\\CloudContent" }.each do |entry|
     describe registry_key(entry) do
       it { should exist }
       it { should have_property 'DisableWindowsSpotlightFeatures' }
@@ -297,7 +299,7 @@ control 'windows-371' do
   only_if('Only for Windows Server 2016, 2019 and if attribute(\'level_1_or_2\') is set to 2') do
     (((os[:name].include? '2016') || (os[:name].include? '2019')) && attribute('level_1_or_2') == 2)
   end
-  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| x.to_s + '\\Software\\Policies\\Microsoft\\Windows\\CloudContent' }.each do |entry|
+  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| "#{x}\\Software\\Policies\\Microsoft\\Windows\\CloudContent" }.each do |entry|
     describe registry_key(entry) do
       it { should exist }
       it { should have_property 'DisableWindowsSpotlightFeatures' }
@@ -321,7 +323,7 @@ control 'windows-372' do
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
-  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| x.to_s + '\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer' }.each do |entry|
+  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| "#{x}\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer" }.each do |entry|
     describe registry_key(entry) do
       it { should exist }
       it { should have_property 'NoInplaceSharing' }
@@ -349,7 +351,7 @@ control 'windows-373' do
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
-  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| x.to_s + '\\Software\\Policies\\Microsoft\\Windows\\Installer' }.each do |entry|
+  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| "#{x}\\Software\\Policies\\Microsoft\\Windows\\Installer" }.each do |entry|
     describe registry_key(entry) do
       it { should exist }
       it { should have_property 'AlwaysInstallElevated' }
@@ -376,7 +378,7 @@ control 'windows-374' do
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
     attribute('level_1_or_2') == 2
   end
-  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| x.to_s + '\\Software\\Policies\\Microsoft\\WindowsMediaPlayer' }.each do |entry|
+  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| "#{x}\\Software\\Policies\\Microsoft\\WindowsMediaPlayer" }.each do |entry|
     describe registry_key(entry) do
       it { should exist }
       it { should have_property 'PreventCodecDownload' }

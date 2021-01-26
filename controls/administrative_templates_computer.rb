@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 title 'Administrative Templates (Computer)'
 
 control 'windows-175' do

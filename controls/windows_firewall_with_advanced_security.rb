@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 title 'windows firewall with advanced policy'
 
 control 'windows-120' do
