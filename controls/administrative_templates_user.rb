@@ -94,12 +94,6 @@ control 'windows-363' do
       it { should exist }
       it { should have_property 'ScreenSaveTimeOut' }
       its('ScreenSaveTimeOut') { should cmp <= 900 }
-    end
-  end
-  registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| "#{x}\\Software\\Policies\\Microsoft\\Windows\\Control Panel\\Desktop" }.each do |entry|
-    describe registry_key(entry) do
-      it { should exist }
-      it { should have_property 'ScreenSaveTimeOut' }
       its('ScreenSaveTimeOut') { should_not eq 0 }
     end
   end
