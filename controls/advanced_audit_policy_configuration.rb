@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 title 'Advanced Audit Policy Configuration'
 
 control 'windows-146' do

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 title 'local policies'
 
 control 'windows-010' do
@@ -911,7 +913,7 @@ control 'windows-050' do
   only_if('This Control only executes if attribute(\'ms_or_dc\') is set to MS') do
     attribute('ms_or_dc') == 'MS'
   end
-  describe(users.where { uid =~ /S\-1\-5\-21\-\d+\-\d+\-\d+\-500/ }) do
+  describe(users.where { uid =~ /S-1-5-21-\d+-\d+-\d+-500/ }) do
     it { should exist }
     it { should be_disabled }
   end
@@ -959,7 +961,7 @@ control 'windows-052' do
   only_if('This Control only executes if attribute(\'ms_or_dc\') is set to MS') do
     attribute('ms_or_dc') == 'MS'
   end
-  describe(users.where { uid =~ /S\-1\-5\-21\-\d+\-\d+\-\d+\-501/ }) do
+  describe(users.where { uid =~ /S-1-5-21-\d+-\d+-\d+-501/ }) do
     it { should exist }
     it { should be_disabled }
   end
@@ -1306,7 +1308,7 @@ control 'windows-067' do
   describe registry_key('HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Netlogon\\Parameters') do
     it { should exist }
     it { should have_property 'MaximumPasswordAge' }
-    its('MaximumPasswordAge') { should cmp > 0 }
+    its('MaximumPasswordAge') { should cmp.positive? }
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Netlogon\\Parameters') do
     it { should exist }
