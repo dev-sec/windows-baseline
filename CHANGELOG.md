@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.1.7](https://github.com/dev-sec/windows-baseline/tree/2.1.7) (2021-01-26)
+## [2.1.7](https://github.com/dev-sec/windows-baseline/tree/2.1.7) (2021-01-29)
 
 [Full Changelog](https://github.com/dev-sec/windows-baseline/compare/2.1.6...2.1.7)
 
@@ -18,6 +18,7 @@
 
 **Merged pull requests:**
 
+- Fix lint [\#50](https://github.com/dev-sec/windows-baseline/pull/50) ([schurzi](https://github.com/schurzi))
 - Fixes comparisons when registry key data type are REG\_SZ [\#46](https://github.com/dev-sec/windows-baseline/pull/46) ([imjoseangel](https://github.com/imjoseangel))
 
 ## [2.1.5](https://github.com/dev-sec/windows-baseline/tree/2.1.5) (2020-07-23)
@@ -103,7 +104,6 @@
 - Update common [\#26](https://github.com/dev-sec/windows-baseline/pull/26) ([atomic111](https://github.com/atomic111))
 - Update issue templates [\#24](https://github.com/dev-sec/windows-baseline/pull/24) ([rndmh3ro](https://github.com/rndmh3ro))
 - fixing control for 'cis-access-cred-manager-2.2.1' [\#23](https://github.com/dev-sec/windows-baseline/pull/23) ([wer-sce](https://github.com/wer-sce))
-- Fixed spelling error [\#17](https://github.com/dev-sec/windows-baseline/pull/17) ([hannah-radish](https://github.com/hannah-radish))
 
 ## [1.1.2](https://github.com/dev-sec/windows-baseline/tree/1.1.2) (2019-03-26)
 
@@ -115,6 +115,7 @@
 
 **Merged pull requests:**
 
+- Fixed spelling error [\#17](https://github.com/dev-sec/windows-baseline/pull/17) ([hannah-radish](https://github.com/hannah-radish))
 - Move SMB1 control to windows-baseline [\#16](https://github.com/dev-sec/windows-baseline/pull/16) ([yvovandoorn](https://github.com/yvovandoorn))
 
 ## [1.1.0](https://github.com/dev-sec/windows-baseline/tree/1.1.0) (2017-05-08)
