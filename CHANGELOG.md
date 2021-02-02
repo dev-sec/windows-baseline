@@ -1,11 +1,20 @@
 # Changelog
 
+## [2.1.8](https://github.com/dev-sec/windows-baseline/tree/2.1.8) (2021-02-02)
+
+[Full Changelog](https://github.com/dev-sec/windows-baseline/compare/2.1.7...2.1.8)
+
+**Merged pull requests:**
+
+- use version tag for changelog action [\#51](https://github.com/dev-sec/windows-baseline/pull/51) ([schurzi](https://github.com/schurzi))
+
 ## [2.1.7](https://github.com/dev-sec/windows-baseline/tree/2.1.7) (2021-01-29)
 
 [Full Changelog](https://github.com/dev-sec/windows-baseline/compare/2.1.6...2.1.7)
 
 **Merged pull requests:**
 
+- Fix lint [\#50](https://github.com/dev-sec/windows-baseline/pull/50) ([schurzi](https://github.com/schurzi))
 - GitHub action [\#49](https://github.com/dev-sec/windows-baseline/pull/49) ([rndmh3ro](https://github.com/rndmh3ro))
 
 ## [2.1.6](https://github.com/dev-sec/windows-baseline/tree/2.1.6) (2020-08-07)
@@ -18,7 +27,6 @@
 
 **Merged pull requests:**
 
-- Fix lint [\#50](https://github.com/dev-sec/windows-baseline/pull/50) ([schurzi](https://github.com/schurzi))
 - Fixes comparisons when registry key data type are REG\_SZ [\#46](https://github.com/dev-sec/windows-baseline/pull/46) ([imjoseangel](https://github.com/imjoseangel))
 
 ## [2.1.5](https://github.com/dev-sec/windows-baseline/tree/2.1.5) (2020-07-23)
