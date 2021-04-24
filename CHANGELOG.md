@@ -1,11 +1,12 @@
 # Changelog
 
-## [2.1.8](https://github.com/dev-sec/windows-baseline/tree/2.1.8) (2021-03-22)
+## [2.1.8](https://github.com/dev-sec/windows-baseline/tree/2.1.8) (2021-04-24)
 
 [Full Changelog](https://github.com/dev-sec/windows-baseline/compare/2.1.7...2.1.8)
 
 **Merged pull requests:**
 
+- fix rubocop error for Rakefile [\#53](https://github.com/dev-sec/windows-baseline/pull/53) ([schurzi](https://github.com/schurzi))
 - add dependency to chef-config for CI [\#52](https://github.com/dev-sec/windows-baseline/pull/52) ([schurzi](https://github.com/schurzi))
 - use version tag for changelog action [\#51](https://github.com/dev-sec/windows-baseline/pull/51) ([schurzi](https://github.com/schurzi))
 
@@ -86,7 +87,6 @@
 - Replace German characters to avoid exec failures and bump version to 2.1.1 [\#36](https://github.com/dev-sec/windows-baseline/pull/36) ([alexpop](https://github.com/alexpop))
 - Update administrative\_templates\_computer.rb [\#32](https://github.com/dev-sec/windows-baseline/pull/32) ([Staggerlee011](https://github.com/Staggerlee011))
 - fix missing "o" in windows-245 [\#31](https://github.com/dev-sec/windows-baseline/pull/31) ([rndmh3ro](https://github.com/rndmh3ro))
-- New windows cis profile for win2012r2 and 2016 [\#27](https://github.com/dev-sec/windows-baseline/pull/27) ([atomic111](https://github.com/atomic111))
 
 ## [2.1.0](https://github.com/dev-sec/windows-baseline/tree/2.1.0) (2019-05-16)
 
@@ -99,6 +99,10 @@
 ## [2.0.0](https://github.com/dev-sec/windows-baseline/tree/2.0.0) (2019-05-15)
 
 [Full Changelog](https://github.com/dev-sec/windows-baseline/compare/1.2.0...2.0.0)
+
+**Merged pull requests:**
+
+- New windows cis profile for win2012r2 and 2016 [\#27](https://github.com/dev-sec/windows-baseline/pull/27) ([atomic111](https://github.com/atomic111))
 
 ## [1.2.0](https://github.com/dev-sec/windows-baseline/tree/1.2.0) (2019-05-15)
 
