@@ -8,7 +8,7 @@ control 'windows-360' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '19.1.3.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '19.1.3.1'
@@ -32,7 +32,7 @@ control 'windows-361' do
 
   The recommended state for this setting is: Enabled: scrnsave.scr.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '19.1.3.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '19.1.3.2'
@@ -56,7 +56,7 @@ control 'windows-362' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '19.1.3.3'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '19.1.3.3'
@@ -80,7 +80,7 @@ control 'windows-363' do
 
   The recommended state for this setting is: Enabled: 900 seconds or fewer, but not 0.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '19.1.3.4'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '19.1.3.4'
@@ -105,7 +105,7 @@ control 'windows-364' do
 
   The recommended state for this setting is Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '19.5.1.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '19.5.1.1'
@@ -129,7 +129,7 @@ control 'windows-365' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '19.6.5.1.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '19.6.5.1.1'
@@ -139,7 +139,7 @@ control 'windows-365' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| "#{x}\\Software\\Policies\\Microsoft\\Assistance\\Client\\1.0" }.each do |entry|
     describe registry_key(entry) do
@@ -156,7 +156,7 @@ control 'windows-366' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '19.7.4.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '19.7.4.1'
@@ -180,7 +180,7 @@ control 'windows-367' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '19.7.4.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '19.7.4.2'
@@ -204,7 +204,7 @@ control 'windows-368' do
 
   The recommended state for this setting is: Disabled.'
   impact 0.5
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '19.7.7.1'
   tag 'level': '2'
@@ -213,7 +213,7 @@ control 'windows-368' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('Only for Windows Server 2016, 2019 and if attribute(\'level_1_or_2\') is set to 2') do
-    (((os[:name].include? '2016') || (os[:name].include? '2019')) && attribute('level_1_or_2') == 2)
+    (((os[:name].include? '2016') || (os[:name].include? '2019')) && input('level_1_or_2') == 2)
   end
   registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| "#{x}\\Software\\Policies\\Microsoft\\Windows\\CloudContent" }.each do |entry|
     describe registry_key(entry) do
@@ -230,7 +230,7 @@ control 'windows-369' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '19.7.7.2'
   tag 'level': '1'
@@ -256,7 +256,7 @@ control 'windows-370' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '19.7.7.3'
   tag 'level': '2'
@@ -265,7 +265,7 @@ control 'windows-370' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('Only for Windows Server 2016, 2019 and if attribute(\'level_1_or_2\') is set to 2') do
-    (((os[:name].include? '2016') || (os[:name].include? '2019')) && attribute('level_1_or_2') == 2)
+    (((os[:name].include? '2016') || (os[:name].include? '2019')) && input('level_1_or_2') == 2)
   end
   registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| "#{x}\\Software\\Policies\\Microsoft\\Windows\\CloudContent" }.each do |entry|
     describe registry_key(entry) do
@@ -282,7 +282,7 @@ control 'windows-371' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '19.7.7.4'
   tag 'level': '2'
@@ -291,7 +291,7 @@ control 'windows-371' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('Only for Windows Server 2016, 2019 and if attribute(\'level_1_or_2\') is set to 2') do
-    (((os[:name].include? '2016') || (os[:name].include? '2019')) && attribute('level_1_or_2') == 2)
+    (((os[:name].include? '2016') || (os[:name].include? '2019')) && input('level_1_or_2') == 2)
   end
   registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| "#{x}\\Software\\Policies\\Microsoft\\Windows\\CloudContent" }.each do |entry|
     describe registry_key(entry) do
@@ -308,7 +308,7 @@ control 'windows-372' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '19.7.26.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '19.7.26.1'
@@ -336,7 +336,7 @@ control 'windows-373' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '19.7.40.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '19.7.40.1'
@@ -360,7 +360,7 @@ control 'windows-374' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '19.7.44.2.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '19.7.44.2.1'
@@ -370,7 +370,7 @@ control 'windows-374' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   registry_key(hive: 'HKEY_USERS').children(/^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$/).map { |x| "#{x}\\Software\\Policies\\Microsoft\\WindowsMediaPlayer" }.each do |entry|
     describe registry_key(entry) do

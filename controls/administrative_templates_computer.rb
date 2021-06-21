@@ -8,7 +8,7 @@ control 'windows-175' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.1.1.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.1.1.1'
@@ -30,7 +30,7 @@ control 'windows-176' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.1.1.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.1.1.2'
@@ -52,7 +52,7 @@ control 'windows-177' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.1.2.2'
   tag 'level': '1'
@@ -76,7 +76,7 @@ control 'windows-178' do
 
   The recommended state for this setting is: Disabled. '
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.1.3'
   tag 'level': '1'
@@ -104,7 +104,7 @@ control 'windows-179' do
 
   **Note:** Organizations that utilize 3rd-party commercial software to manage unique  complex local Administrator passwords on domain members may opt to disregard these LAPS recommendations.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.2.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.2.1'
@@ -114,7 +114,7 @@ control 'windows-179' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'ms_or_dc\') is set to MS') do
-    attribute('ms_or_dc') == 'MS'
+    input('ms_or_dc') == 'MS'
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\GPExtensions\\{D76B9641-3288-4f75-942D-087DE603E3EA}') do
     it { should exist }
@@ -135,7 +135,7 @@ control 'windows-180' do
 
   **Note:** Organizations that utilize 3rd-party commercial software to manage unique complex local Administrator passwords on domain members may opt to disregard these LAPS recommendations.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.2.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.2.2'
@@ -145,7 +145,7 @@ control 'windows-180' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'ms_or_dc\') is set to MS') do
-    attribute('ms_or_dc') == 'MS'
+    input('ms_or_dc') == 'MS'
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft Services\\AdmPwd') do
     it { should exist }
@@ -166,7 +166,7 @@ control 'windows-181' do
 
   **Note:** Organizations that utilize 3rd-party commercial software to manage unique  complex local Administrator passwords on domain members may opt to disregard these LAPS recommendations.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.2.3'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.2.3'
@@ -176,7 +176,7 @@ control 'windows-181' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'ms_or_dc\') is set to MS') do
-    attribute('ms_or_dc') == 'MS'
+    input('ms_or_dc') == 'MS'
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft Services\\AdmPwd') do
     it { should exist }
@@ -197,7 +197,7 @@ control 'windows-182' do
 
   **Note:** Organizations that utilize 3rd-party commercial software to manage unique  complex local Administrator passwords on domain members may opt to disregard these LAPS recommendations.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.2.4'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.2.4'
@@ -207,7 +207,7 @@ control 'windows-182' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'ms_or_dc\') is set to MS') do
-    attribute('ms_or_dc') == 'MS'
+    input('ms_or_dc') == 'MS'
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft Services\\AdmPwd') do
     it { should exist }
@@ -228,7 +228,7 @@ control 'windows-183' do
 
   **Note:** Organizations that utilize 3rd-party commercial software to manage unique  complex local Administrator passwords on domain members may opt to disregard these LAPS recommendations.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.2.5'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.2.5'
@@ -238,7 +238,7 @@ control 'windows-183' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'ms_or_dc\') is set to MS') do
-    attribute('ms_or_dc') == 'MS'
+    input('ms_or_dc') == 'MS'
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft Services\\AdmPwd') do
     it { should exist }
@@ -259,7 +259,7 @@ control 'windows-184' do
 
   **Note:** Organizations that utilize 3rd-party commercial software to manage unique  complex local Administrator passwords on domain members may opt to disregard these LAPS recommendations.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.2.6'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.2.6'
@@ -269,7 +269,7 @@ control 'windows-184' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'ms_or_dc\') is set to MS') do
-    attribute('ms_or_dc') == 'MS'
+    input('ms_or_dc') == 'MS'
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft Services\\AdmPwd') do
     it { should exist }
@@ -292,7 +292,7 @@ control 'windows-185' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.3.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.3.1'
@@ -302,7 +302,7 @@ control 'windows-185' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'ms_or_dc\') is set to MS') do
-    attribute('ms_or_dc') == 'MS'
+    input('ms_or_dc') == 'MS'
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System') do
     it { should exist }
@@ -331,7 +331,7 @@ control 'windows-186' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.3.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.3.2'
@@ -341,7 +341,7 @@ control 'windows-186' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'ms_or_dc\') is set to MS') do
-    attribute('ms_or_dc') == 'MS'
+    input('ms_or_dc') == 'MS'
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\mrxsmb10') do
     it { should exist }
@@ -366,7 +366,7 @@ control 'windows-187' do
 
   [Disabling SMBv1 through Group Policy &#x2013; Microsoft Security Guidance blog](https://blogs.technet.microsoft.com/secguide/2017/06/15/disabling-smbv1-through-group-policy/)'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.3.3'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.3.3'
@@ -390,7 +390,7 @@ control 'windows-188' do
 
   Rationale: This feature is designed to block exploits that use the Structured Exception Handler (SEH) overwrite technique. This protection mechanism is provided at run-time. Therefore, it helps protect applications regardless of whether they have been compiled with the latest improvements, such as the /SAFESEH option.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.3.4'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.3.4'
@@ -416,7 +416,7 @@ control 'windows-189' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.3.5'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.3.6'
@@ -438,7 +438,7 @@ control 'windows-191' do
   The recommended state for this setting is: Enabled.
   For more information, see this link: [Block Potentially Unwanted Applications with Windows Defender AV | Microsoft Docs](https://docs.microsoft.com/de-de/windows/security/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus)'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.3.5'
   tag 'level': '1'
@@ -464,7 +464,7 @@ control 'windows-192' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.4.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.4.1'
@@ -486,7 +486,7 @@ control 'windows-193' do
 
   The recommended state for this setting is: Enabled: Highest protection, source routing is completely disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.4.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.4.2'
@@ -508,7 +508,7 @@ control 'windows-194' do
 
   The recommended state for this setting is: Enabled: Highest protection, source routing is completely disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.4.3'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.4.3'
@@ -530,7 +530,7 @@ control 'windows-195' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.4.4'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.4.4'
@@ -552,7 +552,7 @@ control 'windows-196' do
 
   The recommended state for this setting is: Enabled: 300,000 or 5 minutes (recommended).'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.4.5'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.4.5'
@@ -562,7 +562,7 @@ control 'windows-196' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters') do
     it { should exist }
@@ -577,7 +577,7 @@ control 'windows-197' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.4.6'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.4.6'
@@ -599,7 +599,7 @@ control 'windows-198' do
 
   The recommended state for this setting is: Disabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.4.7'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.4.7'
@@ -609,7 +609,7 @@ control 'windows-198' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters') do
     it { should exist }
@@ -630,7 +630,7 @@ control 'windows-199' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.4.8'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.4.8'
@@ -652,7 +652,7 @@ control 'windows-200' do
 
   The recommended state for this setting is: Enabled: 5 or fewer seconds.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.4.9'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.4.9'
@@ -674,7 +674,7 @@ control 'windows-201' do
 
   The recommended state for this setting is: Enabled: 3.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.4.10'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.4.10'
@@ -684,7 +684,7 @@ control 'windows-201' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\TCPIP6\\Parameters') do
     it { should exist }
@@ -699,7 +699,7 @@ control 'windows-202' do
 
   The recommended state for this setting is: Enabled: 3.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.4.11'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.4.11'
@@ -709,7 +709,7 @@ control 'windows-202' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters') do
     it { should exist }
@@ -726,7 +726,7 @@ control 'windows-203' do
 
   **Note:** If log settings are configured to Overwrite events as needed or Overwrite events older than x days, this event will not be generated.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.4.12'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.4.12'
@@ -752,7 +752,7 @@ control 'windows-204' do
   * An H-node (hybrid) system queries the name server (WINS) first, then broadcasts.
   The recommended state for this setting is: NodeType - 0x2 (2).'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.5.4.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.5.4.1'
@@ -762,7 +762,7 @@ control 'windows-204' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2 and attribute(\'ms_or_dc\') is set to MS') do
-    ((attribute('level_1_or_2') == 2) && (attribute('ms_or_dc') == 'MS'))
+    ((input('level_1_or_2') == 2) && (input('ms_or_dc') == 'MS'))
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Netbt\\Parameters') do
     it { should have_property 'NodeType' }
@@ -776,7 +776,7 @@ control 'windows-205' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.5.4.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.5.4.2'
@@ -786,7 +786,7 @@ control 'windows-205' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2 and attribute(\'ms_or_dc\') is set to MS') do
-    ((attribute('level_1_or_2') == 2) && (attribute('ms_or_dc') == 'MS'))
+    ((input('level_1_or_2') == 2) && (input('ms_or_dc') == 'MS'))
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\DNSClient') do
     it { should have_property 'EnableMulticast' }
@@ -800,7 +800,7 @@ control 'windows-206' do
 
   The recommended state for this setting is: Disabled.'
   impact 0.5
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.5.5.1'
   tag 'level': '2'
@@ -809,7 +809,7 @@ control 'windows-206' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('Only for Windows Server 2016, 2019 and if attribute(\'level_1_or_2\') is set to 2') do
-    (((os[:name].include? '2016') || (os[:name].include? '2019')) && attribute('level_1_or_2') == 2)
+    (((os[:name].include? '2016') || (os[:name].include? '2019')) && input('level_1_or_2') == 2)
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\System') do
     it { should exist }
@@ -824,7 +824,7 @@ control 'windows-207' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.5.8.1'
   tag 'level': '1'
@@ -850,7 +850,7 @@ control 'windows-208' do
 
   The recommended state for this setting is: Disabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.5.9.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.5.9.1'
@@ -860,7 +860,7 @@ control 'windows-208' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\LLTD') do
     it { should exist }
@@ -892,7 +892,7 @@ control 'windows-209' do
 
   The recommended state for this setting is: Disabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.5.9.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.5.9.2'
@@ -902,7 +902,7 @@ control 'windows-209' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\LLTD') do
     it { should exist }
@@ -934,7 +934,7 @@ control 'windows-210' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.5.10.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.5.10.2'
@@ -944,7 +944,7 @@ control 'windows-210' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Peernet') do
     it { should exist }
@@ -959,7 +959,7 @@ control 'windows-211' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.5.11.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.5.11.2'
@@ -981,7 +981,7 @@ control 'windows-212' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.5.11.3'
   tag 'level': '1'
@@ -1005,7 +1005,7 @@ control 'windows-213' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.5.11.3'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.5.11.4'
@@ -1039,7 +1039,7 @@ control 'windows-214' do
 
   Additional guidance on the deployment of this security setting is available from the Microsoft Premier Field Engineering (PFE) Platforms TechNet Blog here: [Guidance on Deployment of MS15-011 and MS15-014](http://blogs.technet.com/b/askpfeplat/archive/2015/02/23/guidance-on-deployment-of-ms15-011-and-ms15-014.aspx).'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.5.14.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.5.14.1'
@@ -1063,7 +1063,7 @@ control 'windows-215' do
 
   The recommended state for this setting is: DisabledComponents - 0xff (255)'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.5.19.2.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.5.19.2.1'
@@ -1073,7 +1073,7 @@ control 'windows-215' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\TCPIP6\\Parameters') do
     it { should exist }
@@ -1088,7 +1088,7 @@ control 'windows-216' do
 
   The recommended state for this setting is: Disabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.5.20.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.5.20.1'
@@ -1098,7 +1098,7 @@ control 'windows-216' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\WCN\\Registrars') do
     it { should exist }
@@ -1133,7 +1133,7 @@ control 'windows-217' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.5.20.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.5.20.2'
@@ -1143,7 +1143,7 @@ control 'windows-217' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\WCN\\UI') do
     it { should exist }
@@ -1158,7 +1158,7 @@ control 'windows-218' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.5.21.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.5.21.1'
@@ -1180,7 +1180,7 @@ control 'windows-219' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.5.21.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.5.21.2'
@@ -1190,7 +1190,7 @@ control 'windows-219' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2 and attribute(\'ms_or_dc\') is set to MS') do
-    ((attribute('level_1_or_2') == 2) && (attribute('ms_or_dc') == 'MS'))
+    ((input('level_1_or_2') == 2) && (input('ms_or_dc') == 'MS'))
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\WcmSvc\\GroupPolicy') do
     it { should have_property 'fBlockNonDomain' }
@@ -1204,7 +1204,7 @@ control 'windows-220' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.3.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.3.1'
@@ -1226,7 +1226,7 @@ control 'windows-221' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.4.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.4.1'
@@ -1257,7 +1257,7 @@ control 'windows-222' do
 
   Rationale: This policy setting helps reduce the impact of malware that has already infected your system'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.14.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.14.1'
@@ -1279,7 +1279,7 @@ control 'windows-223' do
 
   The recommended state for this setting is: Enabled: FALSE (unchecked).'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.21.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.21.2'
@@ -1301,7 +1301,7 @@ control 'windows-224' do
 
   The recommended state for this setting is: Enabled: TRUE (checked).'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.21.3'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.21.3'
@@ -1323,7 +1323,7 @@ control 'windows-225' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.21.4'
   tag 'level': '1'
@@ -1347,7 +1347,7 @@ control 'windows-226' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.21.4'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.21.5'
@@ -1369,7 +1369,7 @@ control 'windows-227' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.22.1.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.22.1.1'
@@ -1379,7 +1379,7 @@ control 'windows-227' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows NT\\Printers') do
     it { should exist }
@@ -1396,7 +1396,7 @@ control 'windows-228' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.22.1.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.22.1.2'
@@ -1406,7 +1406,7 @@ control 'windows-228' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\TabletPC') do
     it { should exist }
@@ -1423,7 +1423,7 @@ control 'windows-229' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.22.1.3'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.22.1.3'
@@ -1433,7 +1433,7 @@ control 'windows-229' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\HandwritingErrorReports') do
     it { should exist }
@@ -1448,7 +1448,7 @@ control 'windows-230' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.22.1.4'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.22.1.4'
@@ -1458,7 +1458,7 @@ control 'windows-230' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\Internet Connection Wizard') do
     it { should exist }
@@ -1473,7 +1473,7 @@ control 'windows-231' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.22.1.5'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.22.1.5'
@@ -1495,7 +1495,7 @@ control 'windows-232' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.22.1.6'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.22.1.6'
@@ -1517,7 +1517,7 @@ control 'windows-233' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.22.1.7'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.22.1.7'
@@ -1527,7 +1527,7 @@ control 'windows-233' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\Registration Wizard Control') do
     it { should exist }
@@ -1542,7 +1542,7 @@ control 'windows-234' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.22.1.8'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.22.1.8'
@@ -1552,7 +1552,7 @@ control 'windows-234' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\SearchCompanion') do
     it { should exist }
@@ -1569,7 +1569,7 @@ control 'windows-235' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.22.1.9'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.22.1.9'
@@ -1579,7 +1579,7 @@ control 'windows-235' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer') do
     it { should exist }
@@ -1594,7 +1594,7 @@ control 'windows-236' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.22.1.10'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.22.1.10'
@@ -1604,7 +1604,7 @@ control 'windows-236' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer') do
     it { should exist }
@@ -1619,7 +1619,7 @@ control 'windows-237' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.22.1.11'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.22.1.11'
@@ -1629,7 +1629,7 @@ control 'windows-237' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Messenger\\Client') do
     it { should exist }
@@ -1644,7 +1644,7 @@ control 'windows-238' do
 
   Microsoft uses information collected through the Windows Customer Experience Improvement Program to detect software flaws so that they can be corrected more quickly, enabling this setting will reduce the amount of data Microsoft is able to gather for this purpose. The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.22.1.12'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.22.1.12'
@@ -1654,7 +1654,7 @@ control 'windows-238' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\SQMClient\\Windows') do
     it { should exist }
@@ -1671,7 +1671,7 @@ control 'windows-239' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.22.1.13'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.22.1.13'
@@ -1681,7 +1681,7 @@ control 'windows-239' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\Windows Error Reporting') do
     it { should exist }
@@ -1698,7 +1698,7 @@ control 'windows-240' do
 
   The recommended state for this setting is: Enabled: Automatic.'
   impact 0.5
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.25.1'
   tag 'level': '2'
@@ -1707,7 +1707,7 @@ control 'windows-240' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('Only for Windows Server 2016, 2019 and if attribute(\'level_1_or_2\') is set to 2') do
-    (((os[:name].include? '2016') || (os[:name].include? '2019')) && attribute('level_1_or_2') == 2)
+    (((os[:name].include? '2016') || (os[:name].include? '2019')) && input('level_1_or_2') == 2)
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\kerberos\\parameters') do
     it { should exist }
@@ -1727,7 +1727,7 @@ control 'windows-241' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.26.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.26.1'
@@ -1737,7 +1737,7 @@ control 'windows-241' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Control Panel\\International') do
     it { should exist }
@@ -1752,7 +1752,7 @@ control 'windows-242' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.27.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.27.1'
@@ -1762,7 +1762,7 @@ control 'windows-242' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\System') do
     it { should exist }
@@ -1777,7 +1777,7 @@ control 'windows-243' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.27.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.27.2'
@@ -1787,7 +1787,7 @@ control 'windows-243' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\System') do
     it { should exist }
@@ -1802,7 +1802,7 @@ control 'windows-244' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.27.3'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.27.3'
@@ -1812,7 +1812,7 @@ control 'windows-244' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\System') do
     it { should exist }
@@ -1827,7 +1827,7 @@ control 'windows-245' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.27.4'
   tag 'level': '1'
@@ -1836,7 +1836,7 @@ control 'windows-245' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('Only for Windows Server 2016, 2019 and if attribute(\'ms_or_dc\') is set to MS') do
-    (((os[:name].include? '2016') || (os[:name].include? '2019')) && attribute('ms_or_dc') == 'MS')
+    (((os[:name].include? '2016') || (os[:name].include? '2019')) && input('ms_or_dc') == 'MS')
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\System') do
     it { should exist }
@@ -1851,7 +1851,7 @@ control 'windows-246' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.27.4'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.27.5'
@@ -1875,7 +1875,7 @@ control 'windows-247' do
 
   **Note:** If the picture password feature is permitted, the user\'s domain password is cached in the system vault when using it.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.27.5'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.27.6'
@@ -1899,7 +1899,7 @@ control 'windows-248' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.27.6'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.27.7'
@@ -1921,7 +1921,7 @@ control 'windows-249' do
 
   The recommended state for this setting is: Enabled: Block untrusted fonts and log events '
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.28.1'
   tag 'level': '1'
@@ -1945,7 +1945,7 @@ control 'windows-250' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.33.6.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.33.6.1'
@@ -1955,7 +1955,7 @@ control 'windows-250' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Power\\PowerSettings\\f15576e8-98b7-4186-b944-eafa664402d9') do
     it { should exist }
@@ -1970,7 +1970,7 @@ control 'windows-251' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.33.6.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.33.6.2'
@@ -1980,7 +1980,7 @@ control 'windows-251' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Power\\PowerSettings\\f15576e8-98b7-4186-b944-eafa664402d9') do
     it { should exist }
@@ -1995,7 +1995,7 @@ control 'windows-252' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.33.6.3'
   tag 'level': '2'
@@ -2004,7 +2004,7 @@ control 'windows-252' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('Only for Windows Server 2016, 2019 and if attribute(\'level_1_or_2\') is set to 2') do
-    (((os[:name].include? '2016') || (os[:name].include? '2019')) && attribute('level_1_or_2') == 2)
+    (((os[:name].include? '2016') || (os[:name].include? '2019')) && input('level_1_or_2') == 2)
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Power\\PowerSettings\\0e796bdb-100d-47d6-a2d5-f7d2daa51f51') do
     it { should exist }
@@ -2019,7 +2019,7 @@ control 'windows-253' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.33.6.4'
   tag 'level': '2'
@@ -2028,7 +2028,7 @@ control 'windows-253' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('Only for Windows Server 2016, 2019 and if attribute(\'level_1_or_2\') is set to 2') do
-    (((os[:name].include? '2016') || (os[:name].include? '2019')) && attribute('level_1_or_2') == 2)
+    (((os[:name].include? '2016') || (os[:name].include? '2019')) && input('level_1_or_2') == 2)
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Power\\PowerSettings\\0e796bdb-100d-47d6-a2d5-f7d2daa51f51') do
     it { should exist }
@@ -2045,7 +2045,7 @@ control 'windows-254' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.35.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.35.1'
@@ -2067,7 +2067,7 @@ control 'windows-255' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.35.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.35.2'
@@ -2091,7 +2091,7 @@ control 'windows-256' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.36.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.36.1'
@@ -2101,7 +2101,7 @@ control 'windows-256' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'ms_or_dc\') is set to MS') do
-    attribute('ms_or_dc') == 'MS'
+    input('ms_or_dc') == 'MS'
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows NT\\Rpc') do
     it { should exist }
@@ -2128,7 +2128,7 @@ control 'windows-257' do
 
   The recommended state for this setting is: Enabled: Authenticated.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.36.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.36.2'
@@ -2138,7 +2138,7 @@ control 'windows-257' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2 and attribute(\'ms_or_dc\') is set to MS') do
-    ((attribute('level_1_or_2') == 2) && (attribute('ms_or_dc') == 'MS'))
+    ((input('level_1_or_2') == 2) && (input('ms_or_dc') == 'MS'))
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows NT\\Rpc') do
     it { should exist }
@@ -2153,7 +2153,7 @@ control 'windows-258' do
 
   The recommended state for this setting is: Disabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.44.5.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.44.5.1'
@@ -2163,7 +2163,7 @@ control 'windows-258' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\ScriptedDiagnosticsProvider\\Policy') do
     it { should exist }
@@ -2178,7 +2178,7 @@ control 'windows-259' do
 
   The recommended state for this setting is: Disabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.44.11.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.44.11.1'
@@ -2188,7 +2188,7 @@ control 'windows-259' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\WDI\\{9c5a40da-b965-4fc3-8781-88dd50a6299d}') do
     it { should exist }
@@ -2203,7 +2203,7 @@ control 'windows-260' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.46.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.46.1'
@@ -2213,7 +2213,7 @@ control 'windows-260' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\policies\\Microsoft\\Windows\\AdvertisingInfo') do
     it { should exist }
@@ -2228,7 +2228,7 @@ control 'windows-261' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.49.1.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.49.1.1'
@@ -2238,7 +2238,7 @@ control 'windows-261' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\W32Time\\TimeProviders\\NtpClient') do
     it { should exist }
@@ -2253,7 +2253,7 @@ control 'windows-262' do
 
   The recommended state for this setting is: Disabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.8.49.1.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.8.49.1.2'
@@ -2263,7 +2263,7 @@ control 'windows-262' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2 and attribute(\'ms_or_dc\') is set to MS') do
-    ((attribute('level_1_or_2') == 2) && (attribute('ms_or_dc') == 'MS'))
+    ((input('level_1_or_2') == 2) && (input('ms_or_dc') == 'MS'))
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\W32Time\\TimeProviders\\NtpServer') do
     it { should exist }
@@ -2278,7 +2278,7 @@ control 'windows-263' do
 
   The recommended state for this setting is: Disabled.'
   impact 0.5
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.4.1'
   tag 'level': '2'
@@ -2287,7 +2287,7 @@ control 'windows-263' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('Only for Windows Server 2016, 2019 and if attribute(\'level_1_or_2\') is set to 2') do
-    (((os[:name].include? '2016') || (os[:name].include? '2019')) && attribute('level_1_or_2') == 2)
+    (((os[:name].include? '2016') || (os[:name].include? '2019')) && input('level_1_or_2') == 2)
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\CurrentVersion\\AppModel\\StateManager') do
     it { should exist }
@@ -2302,7 +2302,7 @@ control 'windows-264' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.6.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.6.1'
@@ -2327,7 +2327,7 @@ control 'windows-265' do
 
   The recommended state for this setting is: Enabled: Do not execute any autorun commands.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.8.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.8.1'
@@ -2349,7 +2349,7 @@ control 'windows-266' do
 
   The recommended state for this setting is: Enabled: Do not execute any autorun commands.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.8.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.8.2'
@@ -2373,7 +2373,7 @@ control 'windows-267' do
 
   The recommended state for this setting is: Enabled: All drives.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.8.3'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.8.3'
@@ -2395,7 +2395,7 @@ control 'windows-268' do
 
   The recommended state for this setting is: Enabled. '
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.10.1.1'
   tag 'level': '1'
@@ -2418,7 +2418,7 @@ control 'windows-269' do
   desc 'This policy setting controls whether the use of Camera devices on the machine are permitted.
   The recommended state for this setting is: Disabled.'
   impact 0.5
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.12.1'
   tag 'level': '2'
@@ -2427,7 +2427,7 @@ control 'windows-269' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('Only for Windows Server 2016, 2019 and if attribute(\'level_1_or_2\') is set to 2') do
-    (((os[:name].include? '2016') || (os[:name].include? '2019')) && attribute('level_1_or_2') == 2)
+    (((os[:name].include? '2016') || (os[:name].include? '2019')) && input('level_1_or_2') == 2)
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Camera') do
     it { should exist }
@@ -2443,7 +2443,7 @@ control 'windows-270' do
 
   Note: Per Microsoft TechNet, this policy setting only applies to Windows 10 Enterprise and Windows 10 Education editions.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.13.1'
   tag 'level': '1'
@@ -2467,7 +2467,7 @@ control 'windows-271' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.14.1'
   tag 'level': '1'
@@ -2491,7 +2491,7 @@ control 'windows-272' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.15.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.15.1'
@@ -2513,7 +2513,7 @@ control 'windows-273' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.15.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.15.2'
@@ -2539,7 +2539,7 @@ control 'windows-274' do
 
   **Note:** If the \'Allow Telemetry\' setting is configured to \'0 - Security [Enterprise Only]\', then the options in Windows Update to defer upgrades and updates will have no effect.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.16.1'
   tag 'level': '1'
@@ -2562,7 +2562,7 @@ control 'windows-275' do
   desc 'This policy setting controls whether the Connected User Experience and Telemetry service can automatically use an authenticated proxy to send data back to Microsoft.
   The recommended state for this setting is: Enabled: Disable Authenticated Proxy usage.'
   impact 0.5
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.16.2'
   tag 'level': '2'
@@ -2571,7 +2571,7 @@ control 'windows-275' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('Only for Windows Server 2016, 2019 and if attribute(\'level_1_or_2\') is set to 2') do
-    (((os[:name].include? '2016') || (os[:name].include? '2019')) && attribute('level_1_or_2') == 2)
+    (((os[:name].include? '2016') || (os[:name].include? '2019')) && input('level_1_or_2') == 2)
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection') do
     it { should exist }
@@ -2586,7 +2586,7 @@ control 'windows-276' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.16.3'
   tag 'level': '1'
@@ -2610,7 +2610,7 @@ control 'windows-277' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.16.4'
   tag 'level': '1'
@@ -2636,7 +2636,7 @@ control 'windows-278' do
 
   **Note:** This policy setting applies only to devices running Windows 10 Pro, Windows 10 Enterprise, or Server 2016.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.16.5'
   tag 'level': '1'
@@ -2666,7 +2666,7 @@ control 'windows-279' do
   Note #2: Microsoft has announced that EMET will be End-Of-Life (EOL) on July 31, 2018. This does not mean the software will stop working, only that Microsoft will not update it any further past that date, nor troubleshoot new problems with it. They are instead recommending that servers be upgraded to Server 2016.
   Note #3: EMET has been reported to be very problematic on 32-bit OSes - we only recommend using it with 64-bit OSes.'
   impact 1.0
-  tag 'windows': %w[2012R2]
+  tag 'windows': %w(2012R2)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.24.1'
   tag 'level': '1'
@@ -2699,7 +2699,7 @@ control 'windows-280' do
   - Banned Functions - Enabled
   - Exploit Action -User Configured'
   impact 1.0
-  tag 'windows': %w[2012R2]
+  tag 'windows': %w(2012R2)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.24.2'
   tag 'level': '1'
@@ -2729,7 +2729,7 @@ control 'windows-281' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2]
+  tag 'windows': %w(2012R2)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.24.3'
   tag 'level': '1'
@@ -2786,7 +2786,7 @@ control 'windows-282' do
   - WinZip
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2]
+  tag 'windows': %w(2012R2)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.24.4'
   tag 'level': '1'
@@ -2845,7 +2845,7 @@ control 'windows-283' do
   * WordPad
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2]
+  tag 'windows': %w(2012R2)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.24.5'
   tag 'level': '1'
@@ -2888,7 +2888,7 @@ control 'windows-284' do
 
   The recommended state for this setting is: Enabled: Application Opt-In.'
   impact 1.0
-  tag 'windows': %w[2012R2]
+  tag 'windows': %w(2012R2)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.24.6'
   tag 'level': '1'
@@ -2912,7 +2912,7 @@ control 'windows-285' do
 
   The recommended state for this setting is: Enabled: Application Opt-Out.'
   impact 1.0
-  tag 'windows': %w[2012R2]
+  tag 'windows': %w(2012R2)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.24.7'
   tag 'level': '1'
@@ -2936,7 +2936,7 @@ control 'windows-286' do
 
   The recommended state for this setting is: Enabled: Application Opt-Out.'
   impact 1.0
-  tag 'windows': %w[2012R2]
+  tag 'windows': %w(2012R2)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.24.8'
   tag 'level': '1'
@@ -2960,7 +2960,7 @@ control 'windows-289' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.26.1.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.26.1.1'
@@ -2982,7 +2982,7 @@ control 'windows-290' do
 
   The recommended state for this setting is: Enabled: 32,768 or greater.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.26.1.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.26.1.2'
@@ -3004,7 +3004,7 @@ control 'windows-291' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.26.2.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.26.2.1'
@@ -3026,7 +3026,7 @@ control 'windows-292' do
 
   The recommended state for this setting is: Enabled: 196,608 or greater.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.26.2.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.26.2.2'
@@ -3048,7 +3048,7 @@ control 'windows-293' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.26.3.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.26.3.1'
@@ -3070,7 +3070,7 @@ control 'windows-294' do
 
   The recommended state for this setting is: Enabled: 32,768 or greater.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.26.3.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.26.3.2'
@@ -3092,7 +3092,7 @@ control 'windows-295' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.26.4.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.26.4.1'
@@ -3114,7 +3114,7 @@ control 'windows-296' do
 
   The recommended state for this setting is: Enabled: 32,768 or greater.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.26.4.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.26.4.2'
@@ -3136,7 +3136,7 @@ control 'windows-297' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.30.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.30.2'
@@ -3158,7 +3158,7 @@ control 'windows-298' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.30.3'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.30.3'
@@ -3180,7 +3180,7 @@ control 'windows-299' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.30.4'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.30.4'
@@ -3202,7 +3202,7 @@ control 'windows-300' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2]
+  tag 'windows': %w(2012R2)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.39.1.1'
   tag 'level': '2'
@@ -3211,7 +3211,7 @@ control 'windows-300' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('Only for Windows Server 2012 and if attribute(\'level_1_or_2\') is set to 2') do
-    ((os[:name].include? '2012') && attribute('level_1_or_2') == 2)
+    ((os[:name].include? '2012') && input('level_1_or_2') == 2)
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\LocationAndSensors') do
     it { should exist }
@@ -3226,7 +3226,7 @@ control 'windows-301' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.39.1.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.39.2'
@@ -3236,7 +3236,7 @@ control 'windows-301' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\LocationAndSensors') do
     it { should exist }
@@ -3251,7 +3251,7 @@ control 'windows-302' do
 
   The recommended state for this setting is: Disabled.'
   impact 0.5
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.43.1'
   tag 'level': '2'
@@ -3260,7 +3260,7 @@ control 'windows-302' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('Only for Windows Server 2016, 2019 and if attribute(\'level_1_or_2\') is set to 2') do
-    (((os[:name].include? '2016') || (os[:name].include? '2019')) && attribute('level_1_or_2') == 2)
+    (((os[:name].include? '2016') || (os[:name].include? '2019')) && input('level_1_or_2') == 2)
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Messaging') do
     it { should exist }
@@ -3275,7 +3275,7 @@ control 'windows-303' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.44.1'
   tag 'level': '1'
@@ -3299,7 +3299,7 @@ control 'windows-304' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.52.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.52.1'
@@ -3321,7 +3321,7 @@ control 'windows-305' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2]
+  tag 'windows': %w(2012R2)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.52.2'
   tag 'level': '1'
@@ -3345,7 +3345,7 @@ control 'windows-306' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.58.2.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.58.2.2'
@@ -3367,7 +3367,7 @@ control 'windows-307' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.58.3.2.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.58.3.2.1'
@@ -3377,7 +3377,7 @@ control 'windows-307' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows NT\\Terminal Services') do
     it { should exist }
@@ -3392,7 +3392,7 @@ control 'windows-308' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.58.3.3.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.58.3.3.1'
@@ -3402,7 +3402,7 @@ control 'windows-308' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services') do
     it { should exist }
@@ -3422,7 +3422,7 @@ control 'windows-309' do
 
   The recommended state for this setting is: Enabled.</driveletter>'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.58.3.3.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.58.3.3.2'
@@ -3444,7 +3444,7 @@ control 'windows-310' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.58.3.3.3'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.58.3.3.3'
@@ -3454,7 +3454,7 @@ control 'windows-310' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services') do
     it { should exist }
@@ -3469,7 +3469,7 @@ control 'windows-311' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.58.3.3.4'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.58.3.3.4'
@@ -3479,7 +3479,7 @@ control 'windows-311' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services') do
     it { should exist }
@@ -3494,7 +3494,7 @@ control 'windows-312' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.58.3.9.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.58.3.9.1'
@@ -3518,7 +3518,7 @@ control 'windows-313' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.58.3.9.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.58.3.9.2'
@@ -3540,7 +3540,7 @@ control 'windows-314' do
 
   The recommended state for this setting is: Enabled: High Level.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.58.3.9.3'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.58.3.9.3'
@@ -3562,7 +3562,7 @@ control 'windows-315' do
 
   The recommended state for this setting is: Enabled: 15 minutes or less.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.58.3.10.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.58.3.10.1'
@@ -3572,7 +3572,7 @@ control 'windows-315' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services') do
     it { should exist }
@@ -3592,7 +3592,7 @@ control 'windows-316' do
 
   The recommended state for this setting is: Enabled: 1 minute.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.58.3.10.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.58.3.10.2'
@@ -3602,7 +3602,7 @@ control 'windows-316' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services') do
     it { should exist }
@@ -3617,7 +3617,7 @@ control 'windows-317' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.58.3.11.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.58.3.11.1'
@@ -3641,7 +3641,7 @@ control 'windows-318' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.58.3.11.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.58.3.11.2'
@@ -3663,7 +3663,7 @@ control 'windows-319' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.59.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.59.1'
@@ -3685,7 +3685,7 @@ control 'windows-320' do
 
   The recommended state for this setting is: Enabled: Disable Cloud Search.'
   impact 0.5
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.60.2'
   tag 'level': '2'
@@ -3694,7 +3694,7 @@ control 'windows-320' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('Only for Windows Server 2016, 2019 and if attribute(\'level_1_or_2\') is set to 2') do
-    (((os[:name].include? '2016') || (os[:name].include? '2019')) && attribute('level_1_or_2') == 2)
+    (((os[:name].include? '2016') || (os[:name].include? '2019')) && input('level_1_or_2') == 2)
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search') do
     it { should exist }
@@ -3709,7 +3709,7 @@ control 'windows-321' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.60.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.60.3'
@@ -3731,7 +3731,7 @@ control 'windows-322' do
 
   The recommended state for this setting is: Enabled: Anonymous info.'
   impact 0.5
-  tag 'windows': %w[2012R2]
+  tag 'windows': %w(2012R2)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.60.3'
   tag 'level': '2'
@@ -3740,7 +3740,7 @@ control 'windows-322' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('Only for Windows Server 2012 and if attribute(\'level_1_or_2\') is set to 2') do
-    ((os[:name].include? '2012') && attribute('level_1_or_2') == 2)
+    ((os[:name].include? '2012') && input('level_1_or_2') == 2)
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search') do
     it { should exist }
@@ -3755,7 +3755,7 @@ control 'windows-323' do
 
   The recommended state for this setting is: Enabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.65.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.65.1'
@@ -3765,7 +3765,7 @@ control 'windows-323' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\CurrentVersion\\Software Protection Platform') do
     it { should exist }
@@ -3780,7 +3780,7 @@ control 'windows-324' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.76.3.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.76.3.1'
@@ -3808,7 +3808,7 @@ control 'windows-325' do
 
   The recommended state for this setting is: Disabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.76.3.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.76.3.2'
@@ -3818,7 +3818,7 @@ control 'windows-325' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Spynet') do
     it { should exist }
@@ -3833,7 +3833,7 @@ control 'windows-326' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.76.7.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.76.7.1'
@@ -3855,7 +3855,7 @@ control 'windows-327' do
 
   The recommended state for this setting is: Disabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.76.9.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.76.9.1'
@@ -3865,7 +3865,7 @@ control 'windows-327' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Reporting') do
     it { should exist }
@@ -3880,7 +3880,7 @@ control 'windows-328' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.76.10.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.76.10.1'
@@ -3902,7 +3902,7 @@ control 'windows-329' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.76.10.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.76.10.2'
@@ -3924,7 +3924,7 @@ control 'windows-330' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.76.13.1.1'
   tag 'level': '1'
@@ -3956,7 +3956,7 @@ control 'windows-331' do
 
   Note: More information on ASR rules can be found at the following link: [Use Attack surface reduction rules to prevent malware infection | Microsoft Docs](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard)'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.76.13.1.2'
   tag 'level': '1'
@@ -3992,7 +3992,7 @@ control 'windows-332' do
 
   The recommended state for this setting is: Enabled: Block.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.76.13.3.1'
   tag 'level': '1'
@@ -4016,7 +4016,7 @@ control 'windows-333' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.76.10.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.76.14'
@@ -4038,7 +4038,7 @@ control 'windows-334' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.79.1.1'
   tag 'level': '1'
@@ -4062,7 +4062,7 @@ control 'windows-335' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.80.1.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.80.1.1'
@@ -4084,7 +4084,7 @@ control 'windows-336' do
 
   The recommended state for this setting is: Enabled: Always ask before sending data.'
   impact 1.0
-  tag 'windows': %w[2012R2]
+  tag 'windows': %w(2012R2)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.81.2.1'
   tag 'level': '1'
@@ -4108,7 +4108,7 @@ control 'windows-337' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2]
+  tag 'windows': %w(2012R2)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.81.3'
   tag 'level': '1'
@@ -4132,7 +4132,7 @@ control 'windows-338' do
 
   The recommended state for this setting is: Disabled.'
   impact 0.5
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.84.1'
   tag 'level': '2'
@@ -4141,7 +4141,7 @@ control 'windows-338' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('Only for Windows Server 2016, 2019 and if attribute(\'level_1_or_2\') is set to 2') do
-    (((os[:name].include? '2016') || (os[:name].include? '2019')) && attribute('level_1_or_2') == 2)
+    (((os[:name].include? '2016') || (os[:name].include? '2019')) && input('level_1_or_2') == 2)
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\WindowsInkWorkspace') do
     it { should exist }
@@ -4156,7 +4156,7 @@ control 'windows-339' do
 
   The recommended state for this setting is: Enabled: On, but disallow access above lock OR Disabled.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.84.2'
   tag 'level': '1'
@@ -4187,7 +4187,7 @@ control 'windows-340' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.85.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.85.1'
@@ -4213,7 +4213,7 @@ control 'windows-341' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.85.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.85.2'
@@ -4235,7 +4235,7 @@ control 'windows-342' do
 
   The recommended state for this setting is: Disabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.85.3'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.85.3'
@@ -4245,7 +4245,7 @@ control 'windows-342' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\Installer') do
     it { should exist }
@@ -4260,7 +4260,7 @@ control 'windows-343' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.86.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.86.1'
@@ -4282,7 +4282,7 @@ control 'windows-344' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.95.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.95.1'
@@ -4304,7 +4304,7 @@ control 'windows-345' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.95.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.95.2'
@@ -4326,7 +4326,7 @@ control 'windows-346' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.97.1.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.97.1.1'
@@ -4348,7 +4348,7 @@ control 'windows-347' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.97.1.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.97.1.2'
@@ -4370,7 +4370,7 @@ control 'windows-348' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.97.1.3'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.97.1.3'
@@ -4392,7 +4392,7 @@ control 'windows-349' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.97.2.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.97.2.1'
@@ -4414,7 +4414,7 @@ control 'windows-350' do
 
   The recommended state for this setting is: Disabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.97.2.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.97.2.2'
@@ -4424,7 +4424,7 @@ control 'windows-350' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WinRM\\Service') do
     it { should exist }
@@ -4439,7 +4439,7 @@ control 'windows-351' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.97.2.3'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.97.2.3'
@@ -4461,7 +4461,7 @@ control 'windows-352' do
 
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.97.2.4'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.97.2.4'
@@ -4483,7 +4483,7 @@ control 'windows-353' do
 
   The recommended state for this setting is: Disabled.'
   impact 0.5
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.98.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.98.1'
@@ -4493,7 +4493,7 @@ control 'windows-353' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
-    attribute('level_1_or_2') == 2
+    input('level_1_or_2') == 2
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\WinRM\\Service\\WinRS') do
     it { should exist }
@@ -4508,7 +4508,7 @@ control 'windows-354' do
 
   The recommended state for this setting is: Enabled: Disable preview builds.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.101.1.1'
   tag 'level': '1'
@@ -4536,7 +4536,7 @@ control 'windows-355' do
 
   The recommended state for this setting is: Enabled: Current Branch for Business, 180 days.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.101.1.2'
   tag 'level': '1'
@@ -4564,7 +4564,7 @@ control 'windows-356' do
 
   The recommended state for this setting is: Enabled: 0 days.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.101.1.3'
   tag 'level': '1'
@@ -4596,7 +4596,7 @@ control 'windows-357' do
   * 5 - Allow local admin to choose setting **(Leave decision on above choices up to the local Administrators (Not Recommended))**
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.101.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.101.2'
@@ -4618,7 +4618,7 @@ control 'windows-358' do
 
   The recommended state for this setting is: 0 - Every day.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.101.3'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.101.3'
@@ -4640,7 +4640,7 @@ control 'windows-359' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '18.9.101.4'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '18.9.101.4'

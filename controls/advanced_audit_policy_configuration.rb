@@ -12,7 +12,7 @@ control 'windows-146' do
   * 4777: The domain controller failed to validate the credentials for an account.
   The recommended state for this setting is: Success and Failure.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.1.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.1.1'
@@ -36,7 +36,7 @@ control 'windows-147' do
 
   The recommended state for this setting is: Success and Failure.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.2.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.2.1'
@@ -59,7 +59,7 @@ control 'windows-148' do
   * 4743: A computer account was deleted.
   The recommended state for this setting is: Success and Failure.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.2.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.2.2'
@@ -95,7 +95,7 @@ control 'windows-149' do
 
   The recommended state for this setting is: Success and Failure.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.2.3'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.2.3'
@@ -105,7 +105,7 @@ control 'windows-149' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'ms_or_dc\') is set to MS') do
-    attribute('ms_or_dc') == 'DC'
+    input('ms_or_dc') == 'DC'
   end
   describe audit_policy do
     its('Distribution Group Management') { should eq 'Success and Failure' }
@@ -120,7 +120,7 @@ control 'windows-150' do
   * 4793: The Password Policy Checking API was called.
   The recommended state for this setting is: Success and Failure.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.2.4'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.2.4'
@@ -156,7 +156,7 @@ control 'windows-151' do
   * 4764: A group\'s type was changed.
   The recommended state for this setting is: Success and Failure.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.2.5'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.2.5'
@@ -192,7 +192,7 @@ control 'windows-152' do
   * 5377: Credential Manager credentials were restored from a backup.
   The recommended state for this setting is: Success and Failure.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.2.6'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.2.6'
@@ -214,7 +214,7 @@ control 'windows-153' do
 
   **Note:** A Windows 10, Server 2016 or higher OS is required to access and set this value in Group Policy.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.3.1'
   tag 'level': '1'
@@ -240,7 +240,7 @@ control 'windows-154' do
 
   The recommended state for this setting is: Success.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.3.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.3.2'
@@ -262,7 +262,7 @@ control 'windows-156' do
   * 4662 : An operation was performed on an object.
   The recommended state for this setting is: Success and Failure.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.4.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.4.1'
@@ -272,7 +272,7 @@ control 'windows-156' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'ms_or_dc\') is set to MS') do
-    attribute('ms_or_dc') == 'DC'
+    input('ms_or_dc') == 'DC'
   end
   describe audit_policy do
     its('Directory Service Access') { should eq 'Success and Failure' }
@@ -289,7 +289,7 @@ control 'windows-157' do
     * 5139 : A directory service object was moved.
     The recommended state for this setting is: Success and Failure.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.4.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.4.2'
@@ -299,7 +299,7 @@ control 'windows-157' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   only_if('This Control only executes if attribute(\'ms_or_dc\') is set to MS') do
-    attribute('ms_or_dc') == 'DC'
+    input('ms_or_dc') == 'DC'
   end
   describe audit_policy do
     its('Directory Service Changes') { should eq 'Success and Failure' }
@@ -313,7 +313,7 @@ control 'windows-158' do
   * 4625: An account failed to log on.
   The recommended state for this setting is: Success and Failure.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.5.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.5.1'
@@ -335,7 +335,7 @@ control 'windows-159' do
 
   **Note:** A Windows 10, Server 2016 or higher OS is required to access and set this value in Group Policy.'
   impact 1.0
-  tag 'windows': %w[2016 2019]
+  tag 'windows': %w(2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.5.2'
   tag 'level': '1'
@@ -359,7 +359,7 @@ control 'windows-160' do
   * 4647: User initiated logoff.
   The recommended state for this setting is: Success.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.5.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.5.3'
@@ -383,7 +383,7 @@ control 'windows-161' do
   * 4675: SIDs were filtered.
   The recommended state for this setting is: Success and Failure.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.5.3'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.5.4'
@@ -413,7 +413,7 @@ control 'windows-162' do
   * 5633: A request was made to authenticate to a wired network.
   The recommended state for this setting is: Success and Failure.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.5.4'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.5.5'
@@ -434,7 +434,7 @@ control 'windows-163' do
   * 4964 : Special groups have been assigned to a new logon.
   The recommended state for this setting is: Success.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.5.5'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.5.6'
@@ -466,7 +466,7 @@ control 'windows-164' do
   * Catalog object deleted.
   The recommended state for this setting is: Success and Failure.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.6.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.6.1'
@@ -488,7 +488,7 @@ control 'windows-165' do
 
   **Note:** A Windows 8, Server 2012 (non-R2) or higher OS is required to access and set this value in Group Policy.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.6.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.6.2'
@@ -517,7 +517,7 @@ control 'windows-166' do
   * 4912: Per User Audit Policy was changed.
   The recommended state for this setting is: Success and Failure.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.7.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.7.1'
@@ -548,7 +548,7 @@ control 'windows-167' do
   * 4867: A trusted forest information entry was modified.
   The recommended state for this setting is: Success.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.7.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.7.2'
@@ -573,7 +573,7 @@ control 'windows-168' do
   * 4714: Encrypted data recovery policy was changed.
   The recommended state for this setting is: Success.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.7.3'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.7.3'
@@ -596,7 +596,7 @@ control 'windows-169' do
   * 4674: An operation was attempted on a privileged object.
   The recommended state for this setting is: Success and Failure.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.8.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.8.1'
@@ -627,7 +627,7 @@ control 'windows-170' do
   * 5485: IPsec Services failed to process some IPsec filters on a plug-and-play event for network interfaces. This poses a potential security risk because some of the network interfaces may not get the protection provided by the applied IPsec filters. Use the IP Security Monitor snap-in to diagnose the problem.
   The recommended state for this setting is: Success and Failure.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.9.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.9.1'
@@ -660,7 +660,7 @@ control 'windows-171' do
   * 5059: Key migration operation.
   The recommended state for this setting is: Success and Failure.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.9.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.9.2'
@@ -684,7 +684,7 @@ control 'windows-172' do
   * 4621: Administrator recovered system from CrashOnAuditFail. Users who are not administrators will now be allowed to log on. Some auditable activity might not have been recorded.
   The recommended state for this setting is: Success.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.9.3'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.9.3'
@@ -709,7 +709,7 @@ control 'windows-173' do
   * 4697: A service was installed in the system.
   The recommended state for this setting is: Success and Failure.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.9.4'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.9.4'
@@ -739,7 +739,7 @@ control 'windows-174' do
   * 5062: A kernel-mode cryptographic self test was performed.
   The recommended state for this setting is: Success and Failure.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '17.9.5'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '17.9.5'
