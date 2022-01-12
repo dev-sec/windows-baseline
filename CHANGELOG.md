@@ -1,11 +1,12 @@
 # Changelog
 
-## [2.1.8](https://github.com/dev-sec/windows-baseline/tree/2.1.8) (2021-04-24)
+## [2.1.8](https://github.com/dev-sec/windows-baseline/tree/2.1.8) (2022-01-12)
 
 [Full Changelog](https://github.com/dev-sec/windows-baseline/compare/2.1.7...2.1.8)
 
 **Merged pull requests:**
 
+- Minimum requirements [\#57](https://github.com/dev-sec/windows-baseline/pull/57) ([micheelengronne](https://github.com/micheelengronne))
 - fix rubocop error for Rakefile [\#53](https://github.com/dev-sec/windows-baseline/pull/53) ([schurzi](https://github.com/schurzi))
 - add dependency to chef-config for CI [\#52](https://github.com/dev-sec/windows-baseline/pull/52) ([schurzi](https://github.com/schurzi))
 - use version tag for changelog action [\#51](https://github.com/dev-sec/windows-baseline/pull/51) ([schurzi](https://github.com/schurzi))
