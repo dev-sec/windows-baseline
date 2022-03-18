@@ -70,7 +70,7 @@ control 'windows-ms-technet-101' do
   title 'Ensure to disable AJRouter services'
   desc 'Routes AllJoyn messages for the local AllJoyn clients. If this service is stopped the AllJoyn clients that do not have their own bundled routers will be unable to run.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -91,7 +91,7 @@ control 'windows-ms-technet-102' do
   title 'Ensure to disable ALG Service'
   desc 'Provides support for third-party protocol plug-ins for Internet Connection Sharing'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -112,7 +112,7 @@ control 'windows-ms-technet-103' do
   title 'Ensure to disable AppMgmt service'
   desc 'Processes installation, removal, and enumeration requests for software deployed through Group Policy. If the service is disabled, users will be unable to install, remove, or enumerate software deployed through Group Policy. If this service is disabled, any services that explicitly depend on it will fail to start.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -133,7 +133,7 @@ control 'windows-ms-technet-104' do
   title 'Ensure to disable AudioEndpointBuilder service'
   desc 'Manages audio devices for the Windows Audio service. If this service is stopped, audio devices and effects will not function properly. If this service is disabled, any services that explicitly depend on it will fail to start'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -154,7 +154,7 @@ control 'windows-ms-technet-105' do
   title 'Ensure to disable Audiosrv service'
   desc 'Manages audio for Windows-based programs. If this service is stopped, audio devices and effects will not function properly. If this service is disabled, any services that explicitly depend on it will fail to start'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -175,7 +175,7 @@ control 'windows-ms-technet-106' do
   title 'Ensure to disable AxInstSV service'
   desc 'Provides User Account Control validation for the installation of ActiveX controls from the Internet and enables management of ActiveX control installation based on Group Policy settings. This service is started on demand and if disabled the installation of ActiveX controls will behave according to default browser settings.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -196,7 +196,7 @@ control 'windows-ms-technet-107' do
   title 'Ensure to disable Bthserv service'
   desc 'The Bluetooth service supports discovery and association of remote Bluetooth devices. Stopping or disabling this service may cause already installed Bluetooth devices to fail to operate properly and prevent new devices from being discovered or associated.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -217,7 +217,7 @@ control 'windows-ms-technet-108' do
   title 'Ensure to disable DcpSvc service'
   desc 'The DCP (Data Collection and Publishing) service supports first-party apps to upload data to cloud.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -238,7 +238,7 @@ control 'windows-ms-technet-109' do
   title 'Ensure to disable DevQueryBroker service'
   desc 'Enables apps to discover devices with a backgroud task'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -259,7 +259,7 @@ control 'windows-ms-technet-110' do
   title 'Ensure to disable DPS service'
   desc 'The Diagnostic Policy Service enables problem detection, troubleshooting and resolution for Windows components. If this service is stopped, diagnostics will no longer function.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -280,7 +280,7 @@ control 'windows-ms-technet-111' do
   title 'Ensure to disable DiagTrack service'
   desc 'The Connected User Experiences and Telemetry service enables features that support in-application and connected user experiences. Additionally, this service manages the event-driven collection and transmission of diagnostic and usage information (used to improve the experience and quality of the Windows Platform) when the diagnostics and usage privacy option settings are enabled under Feedback and Diagnostics.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -301,7 +301,7 @@ control 'windows-ms-technet-112' do
   title 'Ensure to disable Dmwappushservice service'
   desc 'WAP Push Message Routing Service'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -322,7 +322,7 @@ control 'windows-ms-technet-113' do
   title 'Ensure to disable FrameServer service'
   desc 'Enables multiple clients to access video frames from camera devices.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -343,7 +343,7 @@ control 'windows-ms-technet-114' do
   title 'Ensure to disable hidserv service'
   desc 'Activates and maintains the use of hot buttons on keyboards, remote controls, and other multimedia devices. It is recommended that you keep this service running.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -364,7 +364,7 @@ control 'windows-ms-technet-115' do
   title 'Ensure to disable Icssvc service'
   desc 'Provides the ability to share a cellular data connection with another device.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -385,7 +385,7 @@ control 'windows-ms-technet-116' do
   title 'Ensure to disable lfsvc service'
   desc 'This service monitors the current location of the system and manages geofences (a geographical location with associated events). If you turn off this service, applications will be unable to use or receive notifications for geolocation or geofences.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -406,7 +406,7 @@ control 'windows-ms-technet-117' do
   title 'Ensure to disable LicenseManager service'
   desc 'Provides infrastructure support for the Microsoft Store. This service is started on demand and if disabled then content acquired through the Microsoft Store will not function properly.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -427,7 +427,7 @@ control 'windows-ms-technet-118' do
   title 'Ensure to disable MapsBroker service'
   desc 'Windows service for application access to downloaded maps. This service is started on-demand by application accessing downloaded maps. Disabling this service will prevent apps from accessing maps.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -448,7 +448,7 @@ control 'windows-ms-technet-119' do
   title 'Ensure to disable NcbService service'
   desc 'Brokers connections that allow Microsoft Store Apps to receive notifications from the internet.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -469,7 +469,7 @@ control 'windows-ms-technet-120' do
   title 'Ensure to disable PcaSvc service'
   desc 'This service provides support for the Program Compatibility Assistant (PCA). PCA monitors programs installed and run by the user and detects known compatibility problems. If this service is stopped, PCA will not function properly.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -490,7 +490,7 @@ control 'windows-ms-technet-121' do
   title 'Ensure to disable PhoneSvc service'
   desc 'Manages the telephony state on the device'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -511,7 +511,7 @@ control 'windows-ms-technet-122' do
   title 'Ensure to disable PrintNotify service'
   desc 'This service opens custom printer dialog boxes and handles notifications from a remote print server or a printer. If you turn off this service, you won\'t be able to see printer extensions or notifications.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -532,7 +532,7 @@ control 'windows-ms-technet-123' do
   title 'Ensure to disable qWave service'
   desc 'Quality Windows Audio Video Experience (qWave) is a networking platform for Audio Video (AV) streaming applications on IP home networks. qWave enhances AV streaming performance and reliability by ensuring network quality-of-service (QoS) for AV applications. It provides mechanisms for admission control, run time monitoring and enforcement, application feedback, and traffic prioritization.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -553,7 +553,7 @@ control 'windows-ms-technet-124' do
   title 'Ensure to disable RasAuto service'
   desc 'Creates a connection to a remote network whenever a program references a remote DNS or NetBIOS name or address.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -574,7 +574,7 @@ control 'windows-ms-technet-125' do
   title 'Ensure to disable RasMan service'
   desc 'Manages dial-up and virtual private network (VPN) connections from this computer to the Internet or other remote networks. If this service is disabled, any services that explicitly depend on it will fail to start.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -595,7 +595,7 @@ control 'windows-ms-technet-126' do
   title 'Ensure to disable RmSvc service'
   desc 'Radio Management and Airplane Mode Service'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -616,7 +616,7 @@ control 'windows-ms-technet-127' do
   title 'Ensure to disable RpcLocator service'
   desc 'In Windows 2003 and earlier versions of Windows, the Remote Procedure Call (RPC) Locator service manages the RPC name service database. In Windows Vista and later versions of Windows, this service does not provide any functionality and is present for application compatibility.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -637,7 +637,7 @@ control 'windows-ms-technet-128' do
   title 'Ensure to disable RSoPProv service'
   desc 'Provides a network service that processes requests to simulate application of Group Policy settings for a target user or computer in various situations and computes the Resultant Set of Policy settings.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -658,7 +658,7 @@ control 'windows-ms-technet-129' do
   title 'Ensure to disable Sacsvr service'
   desc 'Allows administrators to remotely access a command prompt using Emergency Management Services.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -679,7 +679,7 @@ control 'windows-ms-technet-130' do
   title 'Ensure to disable ScDeviceEnum service'
   desc 'Creates software device nodes for all smart card readers accessible to a given session. If this service is disabled, WinRT APIs will not be able to enumerate smart card readers.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -700,7 +700,7 @@ control 'windows-ms-technet-131' do
   title 'Ensure to disable SCPolicySvc service'
   desc 'Allows the system to be configured to lock the user desktop upon smart card removal.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -721,7 +721,7 @@ control 'windows-ms-technet-132' do
   title 'Ensure to disable SensorDataService service'
   desc 'Delivers data from a variety of sensors'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -742,7 +742,7 @@ control 'windows-ms-technet-133' do
   title 'Ensure to disable SensorService service'
   desc 'A service for sensors that manages different sensors\' functionality. Manages Simple Device Orientation (SDO) and History for sensors. Loads the SDO sensor that reports device orientation changes. If this service is stopped or disabled, the SDO sensor will not be loaded and so auto-rotation will not occur. History collection from Sensors will also be stopped.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -763,7 +763,7 @@ control 'windows-ms-technet-134' do
   title 'Ensure to disable SensrSvc service'
   desc 'Monitors various sensors in order to expose data and adapt to system and user state. If this service is stopped or disabled, the display brightness will not adapt to lighting conditions. Stopping this service may affect other system functionality and features as well.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -784,7 +784,7 @@ control 'windows-ms-technet-135' do
   title 'Ensure to disable SharedAccess service'
   desc 'Provides network address translation, addressing, name resolution and/or intrusion prevention services for a home or small office network.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -805,7 +805,7 @@ control 'windows-ms-technet-136' do
   title 'Ensure to disable ShellHWDetection service'
   desc 'Provides notifications for AutoPlay hardware events.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -826,7 +826,7 @@ control 'windows-ms-technet-137' do
   title 'Ensure to disable SSDPSRV service'
   desc 'Discovers networked devices and services that use the SSDP discovery protocol, such as UPnP devices. Also announces SSDP devices and services running on the local computer. If this service is stopped, SSDP-based devices will not be discovered. If this service is disabled, any services that explicitly depend on it will fail to start.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -848,7 +848,7 @@ control 'windows-ms-technet-138' do
   title 'Ensure to disable stisvc service'
   desc 'Provides image acquisition services for scanners and cameras'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -869,7 +869,7 @@ control 'windows-ms-technet-139' do
   title 'Ensure to disable TabletInputService service'
   desc 'Enables Touch Keyboard and Handwriting Panel pen and ink functionality'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -890,7 +890,7 @@ control 'windows-ms-technet-140' do
   title 'Ensure to disable upnphost service'
   desc 'Allows UPnP devices to be hosted on this computer. If this service is stopped, any hosted UPnP devices will stop functioning and no additional hosted devices can be added. If this service is disabled, any services that explicitly depend on it will fail to start.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -911,7 +911,7 @@ control 'windows-ms-technet-141' do
   title 'Ensure to disable WalletService service'
   desc 'Hosts objects used by clients of the wallet'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -932,7 +932,7 @@ control 'windows-ms-technet-142' do
   title 'Ensure to disable WbioSrvc service'
   desc 'The Windows biometric service gives client applications the ability to capture, compare, manipulate, and store biometric data without gaining direct access to any biometric hardware or samples. The service is hosted in a privileged SVCHOST process.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -953,7 +953,7 @@ control 'windows-ms-technet-143' do
   title 'Ensure to disable wercplsupport service'
   desc 'This service provides support for viewing, sending and deletion of system-level problem reports for the Problem Reports and Solutions control panel.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -974,7 +974,7 @@ control 'windows-ms-technet-144' do
   title 'Ensure to disable WiaRpc service'
   desc 'Launches applications associated with still image acquisition events.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -995,7 +995,7 @@ control 'windows-ms-technet-145' do
   title 'Ensure to disable wisvc service'
   desc 'Ensure to disable Windows Insider Service service'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -1016,7 +1016,7 @@ control 'windows-ms-technet-146' do
   title 'Ensure to disable wlidsvc service'
   desc 'Enables user sign-in through Microsoft account identity services. If this service is stopped, users will not be able to log on to the computer with their Microsoft account.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration', 'SYS.1.2.2.M8', 'Schutz der Systemintegritat']
@@ -1037,7 +1037,7 @@ control 'windows-ms-technet-147' do
   title 'Ensure to disable WPDBusEnum service'
   desc 'Enforces group policy for removable mass-storage devices. Enables applications such as Windows Media Player and Image Import Wizard to transfer and synchronize content using removable mass-storage devices.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -1058,7 +1058,7 @@ control 'windows-ms-technet-148' do
   title 'Ensure to disable WpnService service'
   desc 'This service runs in session 0 and hosts the notification platform and connection provider which handles the connection between the device and WNS server.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -1079,7 +1079,7 @@ control 'windows-ms-technet-149' do
   title 'Ensure to disable XblAuthManager service'
   desc 'Provides authentication and authorization services for interacting with Xbox Live. If this service is stopped, some applications may not operate correctly.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -1100,7 +1100,7 @@ control 'windows-ms-technet-150' do
   title 'Ensure to disable XblGameSave service'
   desc 'This service syncs save data for Xbox Live save enabled games. If this service is stopped, game save data will not upload to or download from Xbox Live.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -1121,7 +1121,7 @@ control 'windows-ms-technet-152' do
   title 'Ensure to disable AppXSVC service'
   desc 'Provides infrastructure support for deploying Store applications. This service is started on demand and if disabled Store applications will not be deployed to the system, and may not function properly.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -1142,7 +1142,7 @@ control 'windows-ms-technet-153' do
   title 'Ensure to disable BrokerInfrastructure service'
   desc 'Windows infrastructure service that controls which background tasks can run on the system.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -1163,7 +1163,7 @@ control 'windows-ms-technet-154' do
   title 'Ensure to disable ClipSVC service'
   desc 'Provides infrastructure support for the Microsoft Store. This service is started on demand and if disabled applications bought using Microsoft Store will not behave correctly.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -1184,7 +1184,7 @@ control 'windows-ms-technet-155' do
   title 'Ensure to disable SNMPTRAP service'
   desc 'Receives trap messages generated by local or remote Simple Network Management Protocol (SNMP) agents and forwards the messages to SNMP management programs running on this computer. If this service is stopped, SNMP-based programs on this computer will not receive SNMP trap messages. If this service is disabled, any services that explicitly depend on it will fail to start.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -1205,7 +1205,7 @@ control 'windows-ms-technet-156' do
   title 'Ensure to disable OneSyncSvc service'
   desc 'This service synchronizes mail, contacts, calendar and various other user data. Mail and other applications dependent on this functionality will not work properly when this service is not running.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -1224,7 +1224,7 @@ control 'windows-ms-technet-157' do
   title 'Ensure to disable UserDataSvc service'
   desc 'Provides apps access to structured user data, including contact info, calendars, messages, and other content. If you stop or disable this service, apps that use this data might not work correctly.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']
@@ -1243,7 +1243,7 @@ control 'windows-ms-technet-158' do
   title 'Ensure to disable UnistoreSvc service'
   desc 'Handles storage of structured user data, including contact info, calendars, messages, and other content. If you stop or disable this service, apps that use this data might not work correctly.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'microsoft': 'technet'
   tag 'bsi': ['SYS.1.2.2.M4', 'Sichere Konfiguration']

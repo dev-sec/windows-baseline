@@ -8,7 +8,7 @@ control 'windows-001' do
 
   The recommended state for this setting is: 24 or more password(s).'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '1.1.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '1.1.1'
@@ -18,7 +18,7 @@ control 'windows-001' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   describe security_policy do
-    its('PasswordHistorySize') { should be >= attribute('password_history_size') }
+    its('PasswordHistorySize') { should be >= input('password_history_size') }
   end
 end
 
@@ -32,7 +32,7 @@ control 'windows-002' do
 
   The recommended state for this setting is 60 or fewer days, but not 0.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '1.1.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '1.1.2'
@@ -42,7 +42,7 @@ control 'windows-002' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   describe security_policy do
-    its('MaximumPasswordAge') { should be <= attribute('maximum_password_age') }
+    its('MaximumPasswordAge') { should be <= input('maximum_password_age') }
   end
   describe security_policy do
     its('MaximumPasswordAge') { should be.positive? }
@@ -55,7 +55,7 @@ control 'windows-003' do
 
   The recommended state for this setting is: 1 or more day(s).'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '1.1.3'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '1.1.3'
@@ -75,7 +75,7 @@ control 'windows-004' do
 
   The recommended state for this setting is: 14 or more character(s). '
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '1.1.4'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '1.1.4'
@@ -103,7 +103,7 @@ control 'windows-005' do
   Each additional character in a password increases its complexity exponentially. For instance, a seven-character, all lower-case alphabetic password would have 267 (approximately 8 x 109 or 8 billion) possible combinations. At 1,000,000 attempts per second (a capability of many password-cracking utilities), it would only take 133 minutes to crack. A seven-character alphabetic password with case sensitivity has 527 combinations. A seven-character case-sensitive alphanumeric password without punctuation has 627 combinations. An eight-character password has 268 (or 2 x 1011) possible combinations. Although this might seem to be a large number, at 1,000,000 attempts per second it would take only 59 hours to try all possible passwords. Remember, these times will significantly increase for passwords that use ALT characters and other special keyboard characters such as "!" or "@". Proper use of the password settings can help make it difficult to mount a brute force attack.
   The recommended state for this setting is: Enabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '1.1.5'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '1.1.5'
@@ -123,7 +123,7 @@ control 'windows-006' do
 
   The recommended state for this setting is: Disabled.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '1.1.6'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '1.1.6'
@@ -145,7 +145,7 @@ control 'windows-007' do
 
   The recommended state for this setting is: 15 or more minute(s).'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '1.2.1'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '1.2.1'
@@ -165,7 +165,7 @@ control 'windows-008' do
 
   The recommended state for this setting is: 10 or fewer invalid logon attempt(s), but not 0.'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '1.2.2'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '1.2.2'
@@ -189,7 +189,7 @@ control 'windows-009' do
 
   The recommended state for this setting is: 15 or more minute(s).'
   impact 1.0
-  tag 'windows': %w[2012R2 2016 2019]
+  tag 'windows': %w(2012R2 2016 2019)
   tag 'profile': ['Domain Controller', 'Member Server']
   tag 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0 - 03-30-2018': '1.2.3'
   tag 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.1.0 - 10-31-2018': '1.2.3'
