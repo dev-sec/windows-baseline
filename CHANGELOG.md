@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.9](https://github.com/dev-sec/windows-baseline/tree/2.1.9) (2022-03-18)
+
+[Full Changelog](https://github.com/dev-sec/windows-baseline/compare/2.1.8...2.1.9)
+
+**Merged pull requests:**
+
+- Change linting to Cookstyle [\#58](https://github.com/dev-sec/windows-baseline/pull/58) ([schurzi](https://github.com/schurzi))
+
 ## [2.1.8](https://github.com/dev-sec/windows-baseline/tree/2.1.8) (2022-01-12)
 
 [Full Changelog](https://github.com/dev-sec/windows-baseline/compare/2.1.7...2.1.8)
