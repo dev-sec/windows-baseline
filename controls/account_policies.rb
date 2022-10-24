@@ -45,7 +45,7 @@ control 'windows-002' do
     its('MaximumPasswordAge') { should be <= input('maximum_password_age') }
   end
   describe security_policy do
-    its('MaximumPasswordAge') { should be.positive? }
+    its('MaximumPasswordAge') { should be > 0 }
   end
 end
 
@@ -178,7 +178,7 @@ control 'windows-008' do
     its('LockoutBadCount') { should be <= 10 }
   end
   describe security_policy do
-    its('LockoutBadCount') { should be.positive? }
+    its('LockoutBadCount') { should be > 0 }
   end
 end
 
