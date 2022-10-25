@@ -1308,7 +1308,7 @@ control 'windows-067' do
   describe registry_key('HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Netlogon\\Parameters') do
     it { should exist }
     it { should have_property 'MaximumPasswordAge' }
-    its('MaximumPasswordAge') { should cmp.positive? }
+    its('MaximumPasswordAge') { should cmp > 0 }
   end
   describe registry_key('HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Netlogon\\Parameters') do
     it { should exist }
