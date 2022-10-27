@@ -1,8 +1,18 @@
 # Changelog
 
-## [2.1.9](https://github.com/dev-sec/windows-baseline/tree/2.1.9) (2022-03-18)
+## [2.1.9](https://github.com/dev-sec/windows-baseline/tree/2.1.9) (2022-10-27)
 
 [Full Changelog](https://github.com/dev-sec/windows-baseline/compare/2.1.8...2.1.9)
+
+**Implemented enhancements:**
+
+- use centralised issue templates and workflows [\#62](https://github.com/dev-sec/windows-baseline/pull/62) ([schurzi](https://github.com/schurzi))
+
+**Fixed bugs:**
+
+- Error `undefined method `positive?' for #<RSpec::Matchers::DSL::Matcher cmp>` [\#59](https://github.com/dev-sec/windows-baseline/issues/59)
+- Fix local\_policies 'no such value .positive?' [\#61](https://github.com/dev-sec/windows-baseline/pull/61) ([spencer-cdw](https://github.com/spencer-cdw))
+- Revert lint breaking .positive [\#60](https://github.com/dev-sec/windows-baseline/pull/60) ([spencer-cdw](https://github.com/spencer-cdw))
 
 **Merged pull requests:**
 
