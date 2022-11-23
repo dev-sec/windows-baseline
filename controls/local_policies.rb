@@ -1847,7 +1847,7 @@ control 'windows-089' do
   only_if('This Control only executes if attribute(\'level_1_or_2\') is set to 2') do
     input('level_1_or_2') == 2
   end
-  describe registry_key('HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Lsa') do
+  describe registry_key('HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa') do
     it { should exist }
     it { should have_property 'DisableDomainCreds' }
     its('DisableDomainCreds') { should eq 1 }

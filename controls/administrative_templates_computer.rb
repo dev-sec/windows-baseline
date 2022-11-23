@@ -1048,7 +1048,7 @@ control 'windows-214' do
   ref 'IT-Grundschutz-Kompendium', url: 'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html'
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
-  describe registry_key('HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\NetworkProvider\\HardenedPaths') do
+  describe registry_key('HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\NetworkProvider\\HardenedPaths') do
     it { should exist }
     it { should have_property '\\\*\\NETLOGON' }
     it { should have_property '\\\*\\SYSVOL' }
@@ -2681,7 +2681,7 @@ control 'windows-279' do
     it { should be_installed }
     its('version') { should cmp >= '5.51' }
   end
-  describe registry_key('HKLM:\\SYSTEM\\CurrentControlSet\\services\\EMET_Service') do
+  describe registry_key('HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\services\\EMET_Service') do
     it { should exist }
     it { should have_property 'Start' }
     its('Start') { should cmp == 2 }
