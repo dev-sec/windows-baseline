@@ -2,7 +2,7 @@
 name: windows-baseline
 title: DevSec Windows Security Baseline
 summary: An InSpec Compliance Profile that covers CIS Microsoft Windows Server 2012R2, 2016 RTM (Release 1607) Benchmark Level 1 and 2 and additional controls from MS technet.
-version: 2.1.9
+version: 2.1.10
 maintainer: DevSec Hardening Framework Team
 copyright: DevSec Hardening Framework Team
 copyright_email: hello@dev-sec.io

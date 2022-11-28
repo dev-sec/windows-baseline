@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.10](https://github.com/dev-sec/windows-baseline/tree/2.1.10) (2022-11-28)
+
+[Full Changelog](https://github.com/dev-sec/windows-baseline/compare/2.1.9...2.1.10)
+
+**Merged pull requests:**
+
+- Always use HKEY\_LOCAL\_MACHINE\ when checking registry keys [\#64](https://github.com/dev-sec/windows-baseline/pull/64) ([spencer-cdw](https://github.com/spencer-cdw))
+
 ## [2.1.9](https://github.com/dev-sec/windows-baseline/tree/2.1.9) (2022-10-27)
 
 [Full Changelog](https://github.com/dev-sec/windows-baseline/compare/2.1.8...2.1.9)
