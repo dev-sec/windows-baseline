@@ -1,8 +1,12 @@
 # Changelog
 
-## [2.1.10](https://github.com/dev-sec/windows-baseline/tree/2.1.10) (2022-11-28)
+## [2.1.10](https://github.com/dev-sec/windows-baseline/tree/2.1.10) (2023-01-11)
 
 [Full Changelog](https://github.com/dev-sec/windows-baseline/compare/2.1.9...2.1.10)
+
+**Fixed bugs:**
+
+- use correct default value for attribute level\_1\_or\_2 [\#65](https://github.com/dev-sec/windows-baseline/pull/65) ([schurzi](https://github.com/schurzi))
 
 **Merged pull requests:**
 
