@@ -14,7 +14,7 @@ attributes:
     - name: level_1_or_2
       required: false
       description: 'define if you want to execute Level 1 or (Level 1 and Level 2)'
-      value: 1,
+      value: 1
       type: numeric
     - name: ms_or_dc
       required: false
