@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.1.10](https://github.com/dev-sec/windows-baseline/tree/2.1.10) (2023-01-11)
+## [2.1.10](https://github.com/dev-sec/windows-baseline/tree/2.1.10) (2023-03-31)
 
 [Full Changelog](https://github.com/dev-sec/windows-baseline/compare/2.1.9...2.1.10)
 
@@ -10,6 +10,7 @@
 
 **Merged pull requests:**
 
+- Configure Renovate [\#66](https://github.com/dev-sec/windows-baseline/pull/66) ([renovate[bot]](https://github.com/apps/renovate))
 - Always use HKEY\_LOCAL\_MACHINE\ when checking registry keys [\#64](https://github.com/dev-sec/windows-baseline/pull/64) ([spencer-cdw](https://github.com/spencer-cdw))
 
 ## [2.1.9](https://github.com/dev-sec/windows-baseline/tree/2.1.9) (2022-10-27)
