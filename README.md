@@ -38,7 +38,7 @@ We use a yml attribute file to steer the configuration, the following options ar
     define which CIS Benchmark Level (1 or 2) you want to execute
 
   * `ms_or_dc`
-    define if you want to execute the profile in the context of a Memeber Server (MS) or Domain Controler (DC)
+    define if you want to execute the profile in the context of a Member Server (MS) or Domain Controller (DC)
 
   * `password_history_size`
     define password history size
@@ -126,7 +126,7 @@ inspec exec windows-baseline --controls 'windows-001'
 
 ## ToDo
 
-- adjust the inspec attributes according to the profile (Member Server or Domain Controller), because for the Domain Controller some attributes are different from a Memeber Server
+- adjust the inspec attributes according to the profile (Member Server or Domain Controller), because for the Domain Controller some attributes are different from a Member Server
 
 ## Contributors + Kudos
 

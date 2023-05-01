@@ -18,7 +18,7 @@ attributes:
       type: numeric
     - name: ms_or_dc
       required: false
-      description: 'define if you want to execute the profile in the context of a Memeber Server (MS) or Domain Controler (DC)'
+      description: 'define if you want to execute the profile in the context of a Member Server (MS) or Domain Controller (DC)'
       value: 'MS'
       type: string
     - name: password_history_size
