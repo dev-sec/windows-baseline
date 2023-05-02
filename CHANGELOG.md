@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.1.10](https://github.com/dev-sec/windows-baseline/tree/2.1.10) (2023-03-31)
+## [2.1.10](https://github.com/dev-sec/windows-baseline/tree/2.1.10) (2023-05-02)
 
 [Full Changelog](https://github.com/dev-sec/windows-baseline/compare/2.1.9...2.1.10)
 
@@ -10,6 +10,7 @@
 
 **Merged pull requests:**
 
+- add spellchecking with codespell [\#67](https://github.com/dev-sec/windows-baseline/pull/67) ([schurzi](https://github.com/schurzi))
 - Configure Renovate [\#66](https://github.com/dev-sec/windows-baseline/pull/66) ([renovate[bot]](https://github.com/apps/renovate))
 - Always use HKEY\_LOCAL\_MACHINE\ when checking registry keys [\#64](https://github.com/dev-sec/windows-baseline/pull/64) ([spencer-cdw](https://github.com/spencer-cdw))
 
@@ -191,7 +192,7 @@
 
 - Removed per control licensing as repo is under Apache 2.0 [\#5](https://github.com/dev-sec/windows-baseline/pull/5) ([grdnrio](https://github.com/grdnrio))
 - 1.0.0 [\#3](https://github.com/dev-sec/windows-baseline/pull/3) ([chris-rock](https://github.com/chris-rock))
-- Switched fron Nil to Nobody SID due to mismatch on 2012R2 [\#2](https://github.com/dev-sec/windows-baseline/pull/2) ([grdnrio](https://github.com/grdnrio))
+- Switched from Nil to Nobody SID due to mismatch on 2012R2 [\#2](https://github.com/dev-sec/windows-baseline/pull/2) ([grdnrio](https://github.com/grdnrio))
 - Joeg/sid refactor [\#1](https://github.com/dev-sec/windows-baseline/pull/1) ([grdnrio](https://github.com/grdnrio))
 
 
